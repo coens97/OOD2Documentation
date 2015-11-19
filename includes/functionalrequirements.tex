@@ -1,0 +1,264 @@
+\chapter{Functional Requirements}
+\section{Requirements}
+\subsection{General requirements}
+\begin{tabularx}{\textwidth}{|p{2cm}X|}\hline
+Code & Requirement \\\hline
+GEN-010 & The program is compatible with Windows 7.\\\hline
+GEN-020 & The system allows to design a flow system using the folowing components:
+\begin{itemize}[noitemsep,nolistsep]
+\item Pump
+\item Sink
+\item Splitter
+\item Adjustable splitter 
+\item Merger
+\end{itemize}
+\\\hline
+GEN-030 & The system shows the flow through the pipelines.\\\hline
+\end{tabularx}
+
+\subsection{System requirements}
+\begin{tabularx}{\textwidth}{|p{2cm}X|}\hline
+Code & Requirement \\\hline
+SYS-010 & The system allows to add components to the flow network.\\\hline
+SYS-020 & The components are not allowed to overlap each other.\\\hline
+SYS-030 & The system allows to connect a pipeline between an unused output of a component to an unused input of a component.\\\hline
+SYS-040 & The system allows to remove components including pipelines.\\\hline
+SYS-040A & All the pipelines connected to the removed component will also be removed.\\\hline
+SYS-050 & The system allows to change the flow output of a pump within his range.\\\hline
+SYS-060 & The system allows to change the distribution of the flow from splitter going to the top and bottom output.\\\hline
+SYS-070 & The system displays the flow going through the pipelines.\\\hline
+SYS-070A & The system displays the pipeline red in case the flow exceeds the safety limit.\\\hline
+SYS-080 & The system displays the flow transported to a sink.\\\hline
+SYS-090 & The system allows to export the flow network to a file.\\\hline
+SYS-100 & The system allows to import a flow network from a file.\\\hline
+\end{tabularx}
+
+\section{Use cases}
+
+\begin{usecase}
+
+\addtitle{Use Case 1}{Adding new component on flow network} 
+
+%Level: "user-goal" or "subfunction"
+\addfield{Level:}{User-goal}
+
+%Primary Actor: Calls on the system to deliver its services.
+\addfield{Primary Actor:}{End-User}
+
+%Preconditions: What must be true on start and worth telling the reader?
+\addfield{Preconditions:}{Component selected}
+
+%Main Success Scenario: A typical, unconditional happy path scenario of success.
+\addscenario{Main Success Scenario:}{
+	\item User select place on flow network grid
+	\item System places component on grid
+}
+
+%Extensions: Alternate scenarios of success or failure.
+\addscenario{Extensions:}{
+	\item[2.a] System can't place component in selected area
+		\begin{enumerate}
+		\item[1.] End-User is informed that component can't be placed
+		\item[2.] User returns to step 1
+		\end{enumerate}
+}
+
+\end{usecase}
+
+\begin{usecase}
+
+\addtitle{Use Case 2}{Creating connection between components} 
+
+%Level: "user-goal" or "subfunction"
+\addfield{Level:}{User-goal}
+
+%Primary Actor: Calls on the system to deliver its services.
+\addfield{Primary Actor:}{End-User}
+
+%Preconditions: What must be true on start and worth telling the reader?
+\addfield{Preconditions:}{Selected pipeline drawing tool}
+
+%Main Success Scenario: A typical, unconditional happy path scenario of success.
+\addscenario{Main Success Scenario:}{
+	\item User selects starting component
+	\item User selects point on grid, through where pipeline will go
+	\item User selects ending component
+	\item Systems draws pipeline
+}
+
+%Extensions: Alternate scenarios of success or failure.
+\addscenario{Extensions:}{
+	\item[1.a] Selected component already has no unused output
+		\begin{enumerate}
+		\item[1.] End-User is informed that the selected component can't be used.
+		\item[2.] Select another component as starting point
+		\end{enumerate}
+	\item[2.a] Selected point on grid is occupied by component
+		\begin{enumerate}
+		\item[1.] The selected point is ignored.
+		\end{enumerate}
+}
+
+\end{usecase}
+
+\begin{usecase}
+
+\addtitle{Use Case 3}{Deleting element on flow network grid} 
+
+%Level: "user-goal" or "subfunction"
+\addfield{Level:}{User-goal}
+
+%Primary Actor: Calls on the system to deliver its services.
+\addfield{Primary Actor:}{End-User}
+
+%Preconditions: What must be true on start and worth telling the reader?
+\addfield{Preconditions:}{Selected tool for removing component}
+
+%Main Success Scenario: A typical, unconditional happy path scenario of success.
+\addscenario{Main Success Scenario:}{
+	\item User selects component on pipeline network grid
+	\item System removes selected component
+	\item System removes pipelines connected to component
+}
+
+%Extensions: Alternate scenarios of success or failure.
+%\addscenario{Extensions:}{
+
+%}
+
+\end{usecase}
+
+\begin{usecase}
+
+\addtitle{Use Case 4}{Changing current flow of a pump} 
+
+%Level: "user-goal" or "subfunction"
+\addfield{Level:}{User-goal}
+
+%Primary Actor: Calls on the system to deliver its services.
+\addfield{Primary Actor:}{End-User}
+
+%Preconditions: What must be true on start and worth telling the reader?
+\addfield{Preconditions:}{Selected pump}
+
+%Main Success Scenario: A typical, unconditional happy path scenario of success.
+\addscenario{Main Success Scenario:}{
+	\item User inputs new flow
+	\item System updates flow network grid.
+}
+
+%Extensions: Alternate scenarios of success or failure.
+\addscenario{Extensions:}{
+	\item[1.a] The new flow exceeds capacity
+		\begin{enumerate}
+		\item[1.] End-User is informed that the selected component can't be used and the maximum flow possible is used
+		\end{enumerate}
+}
+
+\end{usecase}
+
+\begin{usecase}
+
+\addtitle{Use Case 5}{Change output adjustable splitter} 
+
+%Level: "user-goal" or "subfunction"
+\addfield{Level:}{User-goal}
+
+%Primary Actor: Calls on the system to deliver its services.
+\addfield{Primary Actor:}{End-User}
+
+%Preconditions: What must be true on start and worth telling the reader?
+\addfield{Preconditions:}{Selected adjustable splitter}
+
+%Main Success Scenario: A typical, unconditional happy path scenario of success.
+\addscenario{Main Success Scenario:}{
+	\item User uses slider to adjust the output.
+	\item System updated the flow network grid.
+}
+
+%Extensions: Alternate scenarios of success or failure.
+\addscenario{Extensions:}{
+	\item[1.a] Component isn't adjustable splitter.
+		\begin{enumerate}
+		\item[1.] The option to adjust the flow isn't shown.
+		\end{enumerate}
+}
+
+\end{usecase}
+
+\begin{usecase}
+
+\addtitle{Use Case 6}{Current flow} 
+
+%Level: "user-goal" or "subfunction"
+\addfield{Level:}{User-goal}
+
+%Primary Actor: Calls on the system to deliver its services.
+\addfield{Primary Actor:}{End-User}
+
+%Preconditions: What must be true on start and worth telling the reader?
+\addfield{Preconditions:}{Pipeline connection}
+
+%Main Success Scenario: A typical, unconditional happy path scenario of success.
+\addscenario{Main Success Scenario:}{
+	\item System displays current flow in pipeline.
+}
+
+\end{usecase}
+
+\begin{usecase}
+
+\addtitle{Use Case 7}{Current flow} 
+
+%Level: "user-goal" or "subfunction"
+\addfield{Level:}{User-goal}
+
+%Primary Actor: Calls on the system to deliver its services.
+\addfield{Primary Actor:}{System}
+
+%Preconditions: What must be true on start and worth telling the reader?
+\addfield{Preconditions:}{Pipelines are connected between components}
+
+%Main Success Scenario: A typical, unconditional happy path scenario of success.
+\addscenario{Main Success Scenario:}{
+	\item System displays current flow in pipeline.
+}
+
+%Extensions: Alternate scenarios of success or failure.
+\addscenario{Extensions:}{
+	\item[1.a] An adjustable splitter has 1 output
+		\begin{enumerate}
+		\item[1.] All the flow goes to 1 output.
+		\end{enumerate}
+}
+
+\end{usecase}
+
+\begin{usecase}
+
+\addtitle{Use Case 8}{Load file} 
+
+%Level: "user-goal" or "subfunction"
+\addfield{Level:}{User-goal}
+
+%Primary Actor: Calls on the system to deliver its services.
+\addfield{Primary Actor:}{End-User}
+
+%Preconditions: What must be true on start and worth telling the reader?
+\addfield{Preconditions:}{Saved file with pipeline network}
+
+%Main Success Scenario: A typical, unconditional happy path scenario of success.
+\addscenario{Main Success Scenario:}{
+	\item User selects file to open.
+	\item System loads the file.
+}
+
+%Extensions: Alternate scenarios of success or failure.
+\addscenario{Extensions:}{
+	\item[2.a] File can't be loaded.
+		\begin{enumerate}
+		\item[1.] User is informed that file can't be loaded and given the choice to stop or choose another file.
+		\end{enumerate}
+}
+
+\end{usecase}
