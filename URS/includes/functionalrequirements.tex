@@ -325,7 +325,48 @@ SYS-100 & The system allows to import a flow network from a file.\\\hline
 
 %Main Success Scenario: A typical, unconditional happy path scenario of success.
 \addscenario{Main Success Scenario:}{
-	\item User presses save button.
+	\item User click the "Save" button
 	\item System saves the file.
+}
+%Extensions: Alternate scenarios of success or failure.
+\addscenario{Extensions:}{
+	\item[2.a] Project file has not been saved on the device yet.
+		\begin{enumerate}
+		\item[1.] A saving dialogue window pops up.
+		\item[2.] User chooses the directory where the file will be stored, and names the file.
+		\item[3.] User clicks " OK ".
+		\item[4.] System saves the file.
+		\end{enumerate}
+}
+\end{usecase}
+\begin{usecase}
+
+\addtitle{Use Case 11}{Save file as a new file} 
+
+%Level: "user-goal" or "subfunction"
+\addfield{Level:}{User-goal}
+
+%Primary Actor: Calls on the system to deliver its services.
+\addfield{Primary Actor:}{End-User}
+
+%Preconditions: What must be true on start and worth telling the reader?
+\addfield{Preconditions:}{Open pipeline network project}
+
+%Main Success Scenario: A typical, unconditional happy path scenario of success.
+\addscenario{Main Success Scenario:}{
+	\item User clicks " Save as " button.
+	\item A saving dialogue window pops up.
+	\item User chooses the directory where the file will be stored, and names the file.
+	\item User clicks " OK ".
+	\item System saves the file.
+}
+    
+%Extensions: Alternate scenarios of success or failure.
+\addscenario{Extensions:}{
+	\item[3.a] User mis-clicks the " Save as " button and does not want to save the file as a new file.
+		\begin{enumerate}
+		\item[1.] User clicks " Cancel ".
+		\item[2.] Dialogue window closes.
+		\end{enumerate}
 }
 \end{usecase}
