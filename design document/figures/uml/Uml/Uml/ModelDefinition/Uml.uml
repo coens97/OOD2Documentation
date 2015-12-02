@@ -1012,7 +1012,7 @@
           </operation>
           <operation
             Id="0656b327-8331-4061-a253-7b7f405c59f0"
-            name="FileAlreadyExcist"
+            name="FileAlreadyExist"
             isLeaf="false"
             isStatic="false"
             isAbstract="true"
@@ -1021,15 +1021,9 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="f6c1ad86-a97b-4580-a049-7cc60b30d170"
-                  name="string path"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
                   Id="994978e7-ccb8-453a-af1f-deb681afb725"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
                       Id="b4727c54-77da-4653-8936-b244fa35c901"
@@ -1037,6 +1031,13 @@
                       LastKnownLocation="Uml.uml" />
                   </type_NamedElement>
                 </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ce13b6da-c611-4f2a-b51f-5f079ddb53c4"
+                  name="string path"
+                  direction="In"
+                  isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
@@ -1766,6 +1767,379 @@
           </property>
         </ownedAttributesInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="026e0cb3-68ab-4f0c-b711-ae8190f52fcd"
+        name="FlowModel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="67c8d01d-fc28-4b2f-9ffb-eec5a14e4d63"
+        name="IFlowModel"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="ff3a866e-5ae1-411d-af6a-6df38f188e52"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="3e7b2368-0447-4430-843a-1689e65dec55"
+              LastKnownName="IFlowCalculator"
+              LastKnownLocation="Uml.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c8a59233-47ca-465d-b42a-5df4824d9eac"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8588c966-be01-4253-8edb-1c95bd67e244"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributes>
+          <property
+            Id="efa4841d-ef9c-4a39-902c-62d6622fdc5d"
+            name="flowNetwork FlowNetworkEntity"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributes>
+        <ownedOperations>
+          <operation
+            Id="4f60dbc1-0311-438e-acbe-a560ac32bcdb"
+            name="AddMerger"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="055c3b2e-d63a-49a3-8a95-7eaf1a3c97f3"
+                  name="PointEntity point"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="39ee5522-227c-4ab7-83b7-c3ed40afdb3b"
+            name="DuplicateComponent"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="687b81ff-755b-4fa5-b872-0d1cd88b6a90"
+                  name="IComponent component"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="615ff97e-c394-47a4-88a6-603adb1731f3"
+                  name="PointEntity point"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="59e4a300-1bd9-415b-ac2b-d29896b24aa1"
+            name="AddPump"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="17e008f2-bf55-424b-b70c-1c5e3ddd287d"
+                  name="PointEntity point"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="393fd88a-a541-4877-b86b-54e9e1f55487"
+            name="AddSink"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e390f749-e97b-4cb7-afe3-6a6335df4783"
+                  name="PointEntity point"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f4ea74b6-dbc3-4599-8210-245ba7396aa2"
+            name="AddSplitter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5ba1637d-5f0f-41d0-ab70-7ff346ea8fe1"
+                  name="PointEntity point"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="260109ff-6cb5-40f0-9913-955ce50671ec"
+            name="AddPipe"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bbafbf42-309f-4a73-ba04-fbf84b5eb37b"
+                  name="IFlowOutput start"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="84df64c0-c785-4ba8-84cc-3db1beec5c6f"
+                  name="IFlowInput end"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dffcefb8-5cd9-49bf-8b54-637ca6ec25d1"
+                  name="List&lt;Point&gt; path"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2e855edc-4102-47cd-98dc-74d01b85d822"
+            name="MoveComponent"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="07bc50c1-8abf-46f2-9140-b81f314ca8e3"
+                  name="IComponent component"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="47075b8c-8901-450a-b142-826ab66a915a"
+                  name="PointEntity point"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b9f5af3b-bd15-4566-8c86-db70c38679e7"
+            name="DeleteComponent"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="869cd768-20da-4505-88d2-eaab8cfd1560"
+                  name="IComponent component"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a9a05d67-f4be-453d-8249-b5317a1e4daa"
+            name="ComponentPropertyChanged"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b267485c-743d-402e-8374-3983b17406ba"
+                  name="IComponent component"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="beb703be-018e-452c-bd80-ff6c24058dda"
+                  name="...."
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1534afe9-73a3-42ee-908e-fd2f34964de6"
+            name="OpenFile"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c6cad33a-71b8-4bf1-9a56-cad2bf9be7fa"
+                  name="string path"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="eba49c2b-25d9-41a4-bf74-9a4d7452fbb7"
+            name="SaveFile"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9651822f-6de1-449d-86ac-56a9a581ec9a"
+                  name="string path"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="20f3e888-9ed0-47f2-a4b1-37513ddd9564"
+                  name="bool overwrite"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="83b5806b-99c3-4680-b4fa-b77de9e8ec73"
+            name="FileAlreadyExist"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0bfa99bd-cffa-4940-b923-957d092d99fd"
+                  name="string path"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e7e47ede-835b-4a89-b2b9-8f4b36313697"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="b4727c54-77da-4653-8936-b244fa35c901"
+                      LastKnownName="bool"
+                      LastKnownLocation="Uml.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="3e7b2368-0447-4430-843a-1689e65dec55"
+        name="IFlowCalculator"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedAttributes>
+          <property
+            Id="b4a64822-85e3-4edd-b63a-9148d3728459"
+            name="UpdateAll(FlowNetworkEntity flow)"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="ff9b4a69-8784-4fde-aa51-18e8092f9c60"
+            name="UpdateFrom(FlowNetworkEntity flow, IComponent component)"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributes>
+      </Interface>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
