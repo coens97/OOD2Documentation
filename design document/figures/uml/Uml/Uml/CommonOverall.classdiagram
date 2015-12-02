@@ -242,6 +242,12 @@
               <referencedTypeMoniker Id="227c5bd4-9507-43ef-8d2f-169456b5deae" LastKnownName="PointEntity" />
             </type_NamedElement>
           </property>
+          <property Id="0e375de7-044d-47dd-9ecf-634dd50f0102" name="Distribution" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c926a703-0ad9-4cfd-8ed5-8de3d5d2e9e7" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="213705f7-8033-4b58-a7d9-af3047c33e19" LastKnownName="Int" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>

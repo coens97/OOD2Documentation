@@ -1,7 +1,7 @@
 \chapter{Introduction}
 \begin{figure}[h!]
   \centering
-    \includegraphics{figures/SystemOverview.pdf}
+    \includegraphics[scale=0.8]{figures/SystemOverview.pdf}
   \caption{Overview of the system.}
   \label{fig:systemoverview}
 \end{figure}
@@ -13,13 +13,14 @@ The system is divided in layers to make the software more modular. For example t
 The Common Layer is referenced by all the other layers. It contains DTO's which are objects transferred between all the layers. The objects only contain data and don't have any behavior, so the objects are really stupid and have no logic.
 
 \subsection{Presentation Layer}
-The presentation layer handles the UI of the application, this layer doesn't have any business logic. WPF is used for handling the graphics since it allows an MVVM pattern to be implemented see figure \ref{fig:mvvm}. The Presentation Layer only contains the View and the ViewModel, the model is in the Bussines Layer,
+The presentation layer handles the UI of the application, this layer doesn't have any business logic. WPF is used for handling the graphics since it allows an MVVM pattern to be implemented see figure \ref{fig:mvvm}. The Presentation Layer only contains the View and the ViewModel, the model is in the Bussines Layer. The MVVM pattern is used to change properties of selected components. For the graphics it is the best option to use the build-in graphics library and use that in a MVC pattern since it doesn't support MVVM.
 \begin{figure}[h!]
   \centering
     \includegraphics[scale=0.8]{figures/mvvm.png}
   \caption{Model View ViewModel}
   \label{fig:mvvm}
 \end{figure}
+
 
 \subsection{Business Layer}
 The business layer contains the business logic of the program. Business logic include calculating the flow through the network.

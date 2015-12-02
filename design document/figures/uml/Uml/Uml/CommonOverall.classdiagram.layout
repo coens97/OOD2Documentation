@@ -71,7 +71,7 @@
     <classShape Id="0d609ded-ade2-4d27-9ce7-999d4dfbe14d" isExpanded="false" absoluteBounds="8.5, 4.25, 1.5, 0.5" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
       <classMoniker Id="302d8b88-2fb8-4f25-a027-9715d22d7cd4" LastKnownName="SplitterEntity" />
       <nestedChildShapes>
-        <AttributeElementListCompartment Id="40c16870-88ca-4fb9-a473-3efec289b6fc" absoluteBounds="8.515, 4.6400000000000006, 1.4700000000000002, 0.68164060264825832" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <AttributeElementListCompartment Id="40c16870-88ca-4fb9-a473-3efec289b6fc" absoluteBounds="8.515, 4.6400000000000006, 1.4700000000000002, 0.84179684768120444" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
         <OperationElementListCompartment Id="3eb7ee94-7aaa-4192-a078-bfcc2c270d09" absoluteBounds="8.515, 5.3316406026482586, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>

@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="56f2efac-f0b8-43c0-8aec-86af0a920327" name="PresentationOverall" linkedPackageId="df358f45-8965-4c3f-bba4-99c8206437d3" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="8a771437-3d7a-43fe-9663-e1e5683bc704">
+      <profileInstance Id="be01725b-d447-4c27-b0eb-5ca2a621356f" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="7a3e9df4-805e-4eca-8356-bbe148fbd871">
+      <profileInstance Id="0d4047d2-83e9-4deb-b348-7a7c7426b4f9" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3cb09540-927e-450b-a2d2-d16fd712a865" name="MainWindow" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ea96ce3e-f7de-4953-b1d2-c40c02e8e4b8" />
+        <targetEnds>
+          <association Id="25e96ccf-37fb-4698-963e-a17563df8496" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="d4216660-386e-4f51-bc7d-af7cc48665d6" LastKnownName="IDrawable" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c4300347-47ca-4e5c-b765-d52cd257528f" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="57477c0f-5ce5-42f9-ba86-82a09ad7ca20" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c00bd6c5-788c-49af-9652-be49bd832868" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <lowerValueInternal>
+                    <literalString Id="11965726-27f7-43dd-b237-07e1e9e6d4fc" name="Lower" value="0">
+                      <elementDefinition Id="c9713f1e-b409-441b-983d-a7e1b5a4d829" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="ff2d866f-f7d5-4ccd-a4b1-833671a40f1a" name="Upper" value="*">
+                      <elementDefinition Id="c8d97507-805b-483a-962b-55e290c3ea0a" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="6950df74-7ddd-4bbd-8c68-6fa6fa7910d7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b213b7f9-ccb4-46b2-b040-d61b5a7510a4" />
+          </association>
+          <association Id="b77ce3ee-070d-40d8-a1fc-b520b4b66bfe" isDerived="false" sourceEndRoleName="DataBinding" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="01337203-3aa6-4324-b8a0-041de1767580" LastKnownName="ViewModelBase" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ec8bbdab-31db-421b-af83-74818572c93e" name="DataBinding" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bfad72d5-95b9-4a03-8e7f-8fbd92170345" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="91d2ab9d-d1e1-488d-84ae-c86ec6fb0d92" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="88057264-d581-4da7-a52a-52a71d4969ae" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1b1f35b3-ba58-4a3e-944d-1a225dcbabd2" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="6ecf5f19-5b97-4bd2-802e-839aa8fdfa00" name="Drawables" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a7b2317e-1710-424c-8711-556745333e72" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="199d94d9-2a9a-410f-91c0-d534e4372cae" LastKnownName="List&lt;IDrawable&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="586dfa6d-c845-4ea3-b899-779c8e64fa01" name="Draw(Graphics g)" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8950fd46-5ed2-4ffe-bead-9e5569b2bed8" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="d4216660-386e-4f51-bc7d-af7cc48665d6" name="IDrawable" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="59d537e4-052f-458c-b2b1-3b57324a13d1" />
+        <ownedOperations>
+          <operation Id="8ccf7dd3-0d02-47a4-8df3-dd195ebfb63a" name="Draw" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cc70f29f-598f-470a-addc-4c4756a8a191" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6dfb24a0-5427-4d38-ba14-0016327939f6" name="Graphics g" direction="In" isUnique="false">
+                  <elementDefinition Id="6206bb93-e7f3-47f0-9222-6ac6953474fd" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="c82bce54-08c3-46f9-a634-961e0fd9a295" name="PossibleMouseSelect" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d6fef7d3-e1ed-4d61-98f9-1ccb7b2ef619" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fa1bb1a4-5fae-449a-ba89-4b0a5faba222" name="int x" direction="In" isUnique="false">
+                  <elementDefinition Id="30ef0f2f-2545-414d-8dc5-7bd22ad337d4" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4ee23805-c8a6-43ab-be45-95c725949820" name="int y" direction="In" isUnique="false">
+                  <elementDefinition Id="a24ebcda-df1d-4798-84bd-d3badf566267" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6e4af627-03a8-49df-9be9-b9f7ac3ec9c4" direction="Return">
+                  <elementDefinition Id="1ba4ddbd-842d-4639-8e65-70c4271a1033" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="3ffc4f8b-bc1e-4e8d-992f-c4b13ef28a22" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e61a3581-3adb-4e07-98b9-57cfb18b6771" name="MergerDrawable" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0321adfc-54df-4b32-853c-44741207bc77" />
+        <suppliersInternal>
+          <interfaceRealization Id="9531a789-2b42-447c-b831-edb79bcbb597">
+            <interfaceMoniker Id="d4216660-386e-4f51-bc7d-af7cc48665d6" LastKnownName="IDrawable" />
+            <elementDefinition Id="96688345-fb3a-4d99-b0cb-494a87991caa" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="9f6c9663-d4b7-4a1f-ac2a-b2ce6b95d4d4" name="Draw" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="19f4ef47-42ae-4caa-808e-98a4702e503a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6b08aac3-943e-494a-8554-e40a7c35e69c" name="Graphics g" direction="In" isUnique="false">
+                  <elementDefinition Id="9aef8414-b6dc-4b7a-8194-e6bfef46bdd0" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f8a39762-4d48-4dd8-8866-146ea00dac80" name="PossibleMouseSelect" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="601c32f0-103c-4c4f-bc9f-5787960edac8" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e329eb0a-8dc6-4c5e-8934-ec12c47133c2" name="int x" direction="In" isUnique="false">
+                  <elementDefinition Id="55dd0dc0-fc74-446d-9550-a9ef6706a2ca" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3c7e50e0-88c8-4fde-ab4a-a7cd366449d9" name="int y" direction="In" isUnique="false">
+                  <elementDefinition Id="771c1838-aeda-4011-9081-fbae18933eca" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b710e066-2c39-468f-ba72-304867134b2e" direction="Return">
+                  <elementDefinition Id="3faa5f7c-2eb5-4f90-b3b3-97a32350e8d3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="3ffc4f8b-bc1e-4e8d-992f-c4b13ef28a22" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1ea154e2-1f1f-462e-92b3-c120234729a7" name="PumpDrawable" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="bb0d3811-8b51-4437-9cdd-ae760719d64c" />
+        <suppliersInternal>
+          <interfaceRealization Id="ca120193-8d73-4c95-be15-d3c9aedd833a">
+            <interfaceMoniker Id="d4216660-386e-4f51-bc7d-af7cc48665d6" LastKnownName="IDrawable" />
+            <elementDefinition Id="341aefdc-8107-481f-a60f-ca8ac0b477e4" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="a1931be6-b932-48c6-8978-bae606c9302e" name="Draw" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="097e2a79-e26b-49f9-a991-1494bdca6e84" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3cc79536-28fc-4b6e-b7ff-1aea7ca635ec" name="Graphics g" direction="In" isUnique="false">
+                  <elementDefinition Id="7012f438-4afd-4f85-a399-139651f7da6a" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="ef5f14eb-ce21-4e4f-acb6-3a7356292c3d" name="PossibleMouseSelect" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a50759c9-410f-4593-8d94-8a4a04045fca" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="12c4b538-5d8e-45fd-92c9-46fde9715a24" name="int x" direction="In" isUnique="false">
+                  <elementDefinition Id="7fa801c2-515a-452e-8076-da584ed23a57" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7229658a-a032-497e-a932-d2724f6f1b57" name="int y" direction="In" isUnique="false">
+                  <elementDefinition Id="24603d35-6a11-455c-8d8a-86c171969aaf" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="eb02bb3e-9969-482c-ae01-fbc23ab76200" direction="Return">
+                  <elementDefinition Id="5ea8115e-280d-4ab1-91a3-d13488edd9d8" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="3ffc4f8b-bc1e-4e8d-992f-c4b13ef28a22" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b81cf56f-f075-4783-ba13-f0e587f2c20f" name="SinkDrawable" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f32a78fd-ce70-4581-9e4d-db909960a33a" />
+        <suppliersInternal>
+          <interfaceRealization Id="250788e9-559d-4f62-80a9-e03abe6cec19">
+            <interfaceMoniker Id="d4216660-386e-4f51-bc7d-af7cc48665d6" LastKnownName="IDrawable" />
+            <elementDefinition Id="21ae012f-b4ed-4274-b1a3-781ee77620bf" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="ded3756c-cadb-458a-b437-9599e6fab120" name="Draw" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d09d570a-72ca-45f6-aaac-bf7f654b0943" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="09d8e018-6269-4be0-b34e-343a63e1f7c2" name="Graphics g" direction="In" isUnique="false">
+                  <elementDefinition Id="f7087a07-1419-4c7f-bdf3-62aabde9139e" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="df77d3a7-fe68-46f9-b2f8-6ed1a82205f5" name="PossibleMouseSelect" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="eedb48cb-ef66-48d1-9ca8-042ef18aa915" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="dfbf044e-d77b-4428-85a5-dd0860a5676f" name="int x" direction="In" isUnique="false">
+                  <elementDefinition Id="32655d07-ef59-4e7a-b165-aba962b6ab84" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="60b32a53-358d-438c-a0ce-3f1b46ebca17" name="int y" direction="In" isUnique="false">
+                  <elementDefinition Id="717c48bf-4549-4fcd-9d4f-63ee82673d18" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="01261097-6d65-4fec-b19d-c84461cfc8e4" direction="Return">
+                  <elementDefinition Id="b6bd1f6f-7279-4bdd-a269-d8cc6ca45368" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="3ffc4f8b-bc1e-4e8d-992f-c4b13ef28a22" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="3ffc4f8b-bc1e-4e8d-992f-c4b13ef28a22" name="bool" isAbstract="false" isLeaf="false" cachedFullName="bool">
+        <elementDefinition Id="b4727c54-77da-4653-8936-b244fa35c901" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="199d94d9-2a9a-410f-91c0-d534e4372cae" name="List&lt;IDrawable&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;IDrawable&gt;">
+        <elementDefinition Id="080e7eae-bfc2-45d2-a80c-746bfaddeb62" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="751966c6-d368-4211-bf4b-e40305c3d36c" name="SplitterDrawable" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d0f4d9a6-b47b-4eaf-ba27-a47b6d83c322" />
+        <suppliersInternal>
+          <interfaceRealization Id="e77d8a36-ad8d-4c23-826e-16b5bb604684">
+            <interfaceMoniker Id="d4216660-386e-4f51-bc7d-af7cc48665d6" LastKnownName="IDrawable" />
+            <elementDefinition Id="1c08167a-e289-4f68-905b-9774906e865b" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="6b4d007a-bc38-4d78-b58d-f5ef31e5146d" name="Draw" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="73af021f-d5ab-48e3-94a4-498aca58da5e" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="706a53e7-efb4-47f3-a0a3-78db96c1edaa" name="Graphics g" direction="In" isUnique="false">
+                  <elementDefinition Id="e430e05f-0d17-4ba3-a207-3344544ad9a4" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="2cd1f803-3515-4939-a27b-c6ca16a03388" name="PossibleMouseSelect" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8b1a7d46-4111-45c8-88ce-eaf4a8feb310" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1a105068-6312-4d83-8987-b70ef679af23" name="int x" direction="In" isUnique="false">
+                  <elementDefinition Id="69c4c48f-4373-450c-84ae-55df3abb3a0f" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c3ca6f0e-38ef-48bb-9c18-af6ac38887d0" name="int y" direction="In" isUnique="false">
+                  <elementDefinition Id="52ce8687-5899-4752-bceb-7b00a2174ec7" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="34e3a158-b5ed-49cf-a9e6-39b2979f7d22" direction="Return">
+                  <elementDefinition Id="d964358d-2343-4c1f-9783-0a755a8f36ef" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="3ffc4f8b-bc1e-4e8d-992f-c4b13ef28a22" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="01337203-3aa6-4324-b8a0-041de1767580" name="ViewModelBase" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7fd1f24f-2c83-4987-b67e-40f9460b5085" />
+        <ownedAttributesInternal>
+          <property Id="3ad80f5d-c62b-41dd-b6df-960088a6c390" name="PropertyChanged" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="40bd85d6-5f4a-4157-8d08-f0ed946dd11f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="29a12d6c-bf0a-4b51-a4e8-3e5069bee865" LastKnownName="PropertyChangedEventHandler" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="db503d53-37d4-4e8c-a429-50ca82e33ce3" name="SetValue" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d9c37f16-a1e8-4257-ae77-ceb283bbbda1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e0dd0c34-1b78-4c56-9ff2-1ca7c1278329" name="...." direction="In" isUnique="false">
+                  <elementDefinition Id="1c376599-f667-4339-a5e1-6f27873a7ebe" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="db33440f-cdef-4e0f-b796-d7bc1a3832cb" name="OnPropertyChanged" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fd886710-8406-44a9-a449-5b10d03695ea" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="523d83fb-e212-4428-a607-6f115e944a30" name="...." direction="In" isUnique="false">
+                  <elementDefinition Id="2bba95a0-b6fa-44e6-8d1c-683766f7019a" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="29a12d6c-bf0a-4b51-a4e8-3e5069bee865" name="PropertyChangedEventHandler" isAbstract="false" isLeaf="false" cachedFullName="PropertyChangedEventHandler">
+        <elementDefinition Id="8c73f321-1537-4ef3-96f0-f004e08452d5" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d7ef8238-d82a-4dfa-862d-47f439506eba" name="PumpViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b208ee67-6cc3-4cd2-9a80-9a5820204473" />
+        <generalsInternal>
+          <generalization Id="4424fc7b-19d9-4f73-8373-b50a37ece686" isSubstitutable="false">
+            <classMoniker Id="01337203-3aa6-4324-b8a0-041de1767580" LastKnownName="ViewModelBase" />
+            <elementDefinition Id="53cf6fbc-0704-4c3e-89b6-ab68a3eede27" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="843b8b91-1852-47b1-8033-840565f3ecad" name="CurrentFlow" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="17e664c0-2dd4-46eb-905a-85f9216de3c5" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="ef95b91e-565f-42cb-96d1-992ac87bfbcf" LastKnownName="Double" />
+            </type_NamedElement>
+          </property>
+          <property Id="5526833c-1fb8-4990-b74b-8dacc358877d" name="MaximumFlow" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="744f2968-8d24-4da8-8743-fe43daa5a28b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="ef95b91e-565f-42cb-96d1-992ac87bfbcf" LastKnownName="Double" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="ef95b91e-565f-42cb-96d1-992ac87bfbcf" name="Double" isAbstract="false" isLeaf="false" cachedFullName="Double">
+        <elementDefinition Id="372329d5-24f7-473c-bf83-1ea00ef82ef7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="85c1b7a3-b103-41cb-b368-531ad7513d76" name="Double" isAbstract="false" isLeaf="false" cachedFullName="Double">
+        <elementDefinition Id="372329d5-24f7-473c-bf83-1ea00ef82ef7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ffd2ac87-2ef6-40ee-bfe2-ba75c7aa0548" name="PipeViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e4a202c3-717c-4f81-aae4-8d14f6c6bf4e" />
+        <generalsInternal>
+          <generalization Id="90060491-652d-4b27-a155-dd183e377cf5" isSubstitutable="false">
+            <classMoniker Id="01337203-3aa6-4324-b8a0-041de1767580" LastKnownName="ViewModelBase" />
+            <elementDefinition Id="e9f5125c-a930-44b8-aaa7-1aabf9194a61" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="08edd92e-0993-4093-accf-a52daae614f0" name="MaximumFlow" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="18dd0f9b-4cce-4ee2-9b84-546d74968e0e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="85c1b7a3-b103-41cb-b368-531ad7513d76" LastKnownName="Double" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="8d3eb984-e292-4870-8441-ece435545986" name="Double" isAbstract="false" isLeaf="false" cachedFullName="Double">
+        <elementDefinition Id="372329d5-24f7-473c-bf83-1ea00ef82ef7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a34ab5e4-4c27-4b16-aa89-0279b2a17269" name="SplitterViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1fc447f1-253e-4b63-a863-0af768d31592" />
+        <generalsInternal>
+          <generalization Id="4d0003ca-c5bc-4c45-8e44-9eccf6bca70b" isSubstitutable="false">
+            <classMoniker Id="01337203-3aa6-4324-b8a0-041de1767580" LastKnownName="ViewModelBase" />
+            <elementDefinition Id="acf40de1-5637-4d8e-84c1-1642362e44e0" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="6f1e4f05-a443-428c-b123-8f2a3550782d" name="MaximumFlow" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="18ebfc76-0a1c-4faf-9903-562e89a66e96" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="8d3eb984-e292-4870-8441-ece435545986" LastKnownName="Double" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="df358f45-8965-4c3f-bba4-99c8206437d3" name="Uml">
+    <elementDefinition Id="6e07362e-7e1f-4cd5-bf4f-eb4177744791" />
+  </package>
+</logicalClassDesignerModel>

@@ -5,7 +5,7 @@ The class diagram shown in figure \ref{fig:commonoverview} gives an overview of 
 In figure \ref{fig:classcomponents} the class diagram gives a more detailed view of the components and in more detail how the pipes are connected. Very noticeable are the interfaces \emph{IFlowOutput} and \emph{IFlowInput}. Since a component can have more than 1 input/output an array is used, whereby the pipe also needs to understand to which output it is connected hence the pipe also has the index pipe.
 
 \section{Presentation Layer}
-TODO
+The presentation layer as seen in figure \ref{fig:presentationoverall} has left out a lot of logic, e.g. click events ands such since it is redundant to the reader. View-models are used to edit the properties of selected components. The \emph{ViewModelBase} is an abstract class for all the view-models, using data-binding the data is shown on the screen. If the end-user edits a property an event will be triggered back. This isn't possible with the graphics since it works best with text and not with graphics manipulation. When data is changed it will be triggered to the business layer.
 
 \section{Business Layer}
 TODO
@@ -32,4 +32,11 @@ Figure \ref{fig:dataaccess} shows the class diagram of the Data Access layer, th
 	\includegraphics[width=\textwidth]{figures/ClassCommonComponents.pdf}
 	\caption{Class Diagram Common Components}
 	\label{fig:classcomponents}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{figures/PresentationOverall.pdf}
+	\caption{Class Diagram Presentation Layer}
+	\label{fig:presentationoverall}
 \end{sidewaysfigure}
