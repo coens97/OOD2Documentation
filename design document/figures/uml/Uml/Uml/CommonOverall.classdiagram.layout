@@ -84,7 +84,7 @@
       </nodes>
     </realizationConnector>
     <classShape Id="8df81340-2c65-490d-8e1a-d4875f010375" absoluteBounds="4.5, 0.5, 2.25, 1.2226562251647315" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
-      <classMoniker Id="555b9b2b-bfc7-4622-b8a6-413643c0da83" LastKnownName="FlowNetWorkEntity" />
+      <classMoniker Id="555b9b2b-bfc7-4622-b8a6-413643c0da83" LastKnownName="FlowNetworkEntity" />
       <nestedChildShapes>
         <AttributeElementListCompartment Id="9830397c-e11c-4e1b-80d8-3a9ae3cb1e1f" absoluteBounds="4.515, 0.89, 2.2199999999999998, 0.52148435761531187" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
         <OperationElementListCompartment Id="5731a96f-d9d5-4ff4-abd4-149f01b08db7" absoluteBounds="4.515, 1.421484357615312, 2.2199999999999998, 0.20117186754941951" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />

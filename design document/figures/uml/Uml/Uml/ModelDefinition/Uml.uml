@@ -766,7 +766,7 @@
     <packageHasNamedElement>
       <class
         Id="2425d559-80f9-4246-9ced-2d7160ccf160"
-        name="FlowNetWorkEntity"
+        name="FlowNetworkEntity"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -909,6 +909,126 @@
       <undefinedType
         Id="0c9fdf1e-d81f-4391-92cc-a508734b14ec"
         name="List&lt;IComponent&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="bf0e676c-2208-4dfc-9750-e3eb475eec55"
+        name="IDataAccesLayer"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="6d63de94-267d-4916-9a93-808d2e30c9ba"
+            name="OpenFile"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dbdc6f2f-94c0-40ef-97a4-6457e932e9da"
+                  name="string path"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4d30430b-be84-43ea-a298-f39aa0b36057"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2425d559-80f9-4246-9ced-2d7160ccf160"
+                      LastKnownName="FlowNetworkEntity"
+                      LastKnownLocation="Uml.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="37f9013e-9007-4929-9fcc-4d2569f6e05b"
+            name="SaveFile"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e86bb3c3-9868-44b6-934f-3c4fd6df65e9"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="b4727c54-77da-4653-8936-b244fa35c901"
+                      LastKnownName="bool"
+                      LastKnownLocation="Uml.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="26a0ba5d-b546-4394-b49a-eac62151885d"
+                  name="string path"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1724d9de-85b5-4a0e-9455-e8d7cc60c58f"
+                  name="bool overwrite"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bdf1b9c8-f1d3-4611-87e9-fb3de3d43222"
+                  name="FlowNetworkEntity flowNetwork"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0656b327-8331-4061-a253-7b7f405c59f0"
+            name="FileAlreadyExcist"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f6c1ad86-a97b-4580-a049-7cc60b30d170"
+                  name="string path"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="994978e7-ccb8-453a-af1f-deb681afb725"
+                  direction="Return">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="b4727c54-77da-4653-8936-b244fa35c901"
+                      LastKnownName="bool"
+                      LastKnownLocation="Uml.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="b4727c54-77da-4653-8936-b244fa35c901"
+        name="bool" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

@@ -251,7 +251,7 @@
       </referencedType>
     </packageHasNamedElement>
     <logicalClassDesignerModelHasTypes>
-      <class Id="555b9b2b-bfc7-4622-b8a6-413643c0da83" name="FlowNetWorkEntity" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="555b9b2b-bfc7-4622-b8a6-413643c0da83" name="FlowNetworkEntity" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="2425d559-80f9-4246-9ced-2d7160ccf160" />
         <targetEnds>
           <association Id="eeb427fd-8b39-42c5-9d00-039eca97a95b" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">

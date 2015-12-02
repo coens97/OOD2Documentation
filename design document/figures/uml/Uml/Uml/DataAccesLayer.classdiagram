@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="479a65f2-50fa-47da-b346-799b0f68b43e" name="DataAccesLayer" linkedPackageId="4446617e-1a75-4d64-b8de-ca85b24cb930" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="4c6aa513-925c-4a3e-bf94-adef6d19787a">
+      <profileInstance Id="527e9ec1-0c88-461e-87b4-3fc324df0516" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="e1733d9d-fef7-45d0-9c24-c76b1ed759bd">
+      <profileInstance Id="f86c3dcc-43f1-4b2e-99c1-0c228dc97f5a" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="0d9d4121-4849-4d6a-91d2-d92996897ebc" name="IDataAccesLayer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bf0e676c-2208-4dfc-9750-e3eb475eec55" />
+        <ownedOperations>
+          <operation Id="fa37ee93-79b3-444d-99fd-89cb6f788f42" name="OpenFile" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6d63de94-267d-4916-9a93-808d2e30c9ba" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="33f2da7a-776e-48b6-b4be-2e990534849d" name="string path" direction="In" isUnique="false">
+                  <elementDefinition Id="dbdc6f2f-94c0-40ef-97a4-6457e932e9da" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4799a733-594a-45f3-9f05-285b7fab2bba" direction="Return">
+                  <elementDefinition Id="4d30430b-be84-43ea-a298-f39aa0b36057" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ee032241-2ad2-4c69-99df-9e80ecb76ba0" LastKnownName="FlowNetworkEntity" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="a3b23665-004d-4d80-bfa0-bd2345c4abf1" name="SaveFile" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="37f9013e-9007-4929-9fcc-4d2569f6e05b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="38b90b6d-d75f-4ae5-ab04-72c1c306e502" direction="Return" isUnique="false">
+                  <elementDefinition Id="e86bb3c3-9868-44b6-934f-3c4fd6df65e9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="834a08ee-80e4-4bc4-aaac-2456007a7614" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3517bfdb-9b3a-4a2d-a241-dc026aaa5dfa" name="string path" direction="In" isUnique="false">
+                  <elementDefinition Id="26a0ba5d-b546-4394-b49a-eac62151885d" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7bea1c3c-41af-4bb6-82c3-8a45e8a0fd0c" name="bool overwrite" direction="In" isUnique="false">
+                  <elementDefinition Id="1724d9de-85b5-4a0e-9455-e8d7cc60c58f" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f4102a9a-a9e4-4611-8dea-3bd309667785" name="FlowNetworkEntity flowNetwork" direction="In" isUnique="false">
+                  <elementDefinition Id="bdf1b9c8-f1d3-4611-87e9-fb3de3d43222" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="99b10eb7-f557-413d-8a23-3d0c675bc040" name="FileAlreadyExcist" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0656b327-8331-4061-a253-7b7f405c59f0" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cc3c03ee-7ed7-4d4d-81ba-813745132519" name="string path" direction="In" isUnique="false">
+                  <elementDefinition Id="f6c1ad86-a97b-4580-a049-7cc60b30d170" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d21ffb25-f752-45b3-9e79-ca12d00e0a7d" direction="Return">
+                  <elementDefinition Id="994978e7-ccb8-453a-af1f-deb681afb725" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="2c79ba1b-af44-44bf-b527-91705d98fe61" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="2c79ba1b-af44-44bf-b527-91705d98fe61" name="bool" isAbstract="false" isLeaf="false" cachedFullName="bool">
+        <elementDefinition Id="b4727c54-77da-4653-8936-b244fa35c901" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ee032241-2ad2-4c69-99df-9e80ecb76ba0" name="FlowNetworkEntity" isAbstract="false" isLeaf="false" cachedFullName="Uml::FlowNetworkEntity">
+        <elementDefinition Id="2425d559-80f9-4246-9ced-2d7160ccf160" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="834a08ee-80e4-4bc4-aaac-2456007a7614" name="bool" isAbstract="false" isLeaf="false" cachedFullName="bool">
+        <elementDefinition Id="b4727c54-77da-4653-8936-b244fa35c901" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="4446617e-1a75-4d64-b8de-ca85b24cb930" name="Uml">
+    <elementDefinition Id="6e07362e-7e1f-4cd5-bf4f-eb4177744791" />
+  </package>
+</logicalClassDesignerModel>
