@@ -19,6 +19,8 @@ GEN-030 & The system shows the flow through the pipelines.\\\hline
 \begin{tabularx}{\textwidth}{|p{2cm}X|}\hline
 Code & Requirement \\\hline
 SYS-010 & The system allows to add components to the flow network.\\\hline
+SYS-015 & The system allows to duplicate components (excluding pipelines).\\\hline
+SYS-018 & The system allows to move components.\\\hline
 SYS-020 & The components are not allowed to overlap each other.\\\hline
 SYS-030 & The system allows to connect a pipeline between an unused output of a component to an unused input of a component.\\\hline
 SYS-040 & The system allows to remove components including pipelines.\\\hline
@@ -50,7 +52,7 @@ SYS-100 & The system allows to import a flow network from a file.\\\hline
 %Main Success Scenario: A typical, unconditional happy path scenario of success.
 \addscenario{Main Success Scenario:}{
 	\item User selects place on flow network grid
-	\item System places component on grid
+	\item System places component on grid with default values see section \ref{sec:defv}
 	\item System updates internal state
 }
 
@@ -67,7 +69,7 @@ SYS-100 & The system allows to import a flow network from a file.\\\hline
 
 \begin{usecase}
 
-\addtitle{Use Case 2}{Changing flow output/input in pump/tank} 
+\addtitle{Use Case 2}{Changing flow output of pump} 
 
 %Level: "user-goal" or "subfunction"
 \addfield{Level:}{User-goal}
@@ -76,23 +78,25 @@ SYS-100 & The system allows to import a flow network from a file.\\\hline
 \addfield{Primary Actor:}{End-User}
 
 %Preconditions: What must be true on start and worth telling the reader?
-\addfield{Preconditions:}{Selected pump/tank on flow network grid}
+\addfield{Preconditions:}{User selected pump on flow network grid}
 
 %Main Success Scenario: A typical, unconditional happy path scenario of success.
 \addscenario{Main Success Scenario:}{
-	\item User selects component on grid
 	\item System opens property sidebar
-	\item User input new output/input values in properties sidebar
-	\item System updates values of component
-	\item System updates internal state
+	\item User can change current flow and maximum flow of pump
+	\item System updates values of component and calculates the flow through the network
+	\item System updates the changes on the screen
 }
 
 %Extensions: Alternate scenarios of success or failure.
 \addscenario{Extensions:}{
-	\item[2.a] System can't open property bar, because user selected wrong component
+	\item[2.a] User gives a value for current flow larger than maximum flow
 		\begin{enumerate}
-		\item[1.] User returns to step 1.
-		\item[2.] End of use case
+		\item[1.] Current flow is set to the maximum flow
+		\end{enumerate}
+	\item[2.b] User gives a negative number or non-numeric value
+		\begin{enumerate}
+			\item[1.] Current flow is set to 0
 		\end{enumerate}
 }
 
@@ -109,25 +113,20 @@ SYS-100 & The system allows to import a flow network from a file.\\\hline
 \addfield{Primary Actor:}{End-User}
 
 %Preconditions: What must be true on start and worth telling the reader?
-\addfield{Preconditions:}{Selected pump/tank on flow network grid}
+\addfield{Preconditions:}{User selected splitter on flow network grid}
 
 %Main Success Scenario: A typical, unconditional happy path scenario of success.
 \addscenario{Main Success Scenario:}{
-	\item User selects component on grid
 	\item System opens property sidebar
-	\item User input new output values in properties sidebar
-	\item System updates values of component
-	\item System updates internal state
+	\item User set the division between outputs in the property sidebar using a slider
+	\item System updates values of component and calculates the flow through the network
+	\item System updates the changes on the screen
 }
 
 %Extensions: Alternate scenarios of success or failure.
-\addscenario{Extensions:}{
-	\item[2.a] System can't open property bar, because user selected wrong component
-		\begin{enumerate}
-		\item[1.] User returns to step 1.
-		\item[2.] End of use case
-		\end{enumerate}
-}
+%\addscenario{Extensions:}{
+
+%}
 
 \end{usecase}
 
@@ -147,11 +146,11 @@ SYS-100 & The system allows to import a flow network from a file.\\\hline
 %Main Success Scenario: A typical, unconditional happy path scenario of success.
 \addscenario{Main Success Scenario:}{
 	\item User selects starting component
-	\item User selects point on grid, through where pipeline will go
-	\item User repeats step 2, untill he has selected all points, through where pipeline will go
+	\item User selects point on grid, through which pipeline will go
+	\item User repeats step 2, until he has selected all points, through where pipeline will go
 	\item User selects ending component
-	\item Systems draws pipeline
 	\item System updates internal state
+	\item System updates the changes on the screen
 }
 
 %Extensions: Alternate scenarios of success or failure.
@@ -172,7 +171,7 @@ SYS-100 & The system allows to import a flow network from a file.\\\hline
 
 \begin{usecase}
 
-\addtitle{Use Case 5}{Deleting element on flow network grid} 
+\addtitle{Use Case 5}{Deleting component on flow network grid} 
 
 %Level: "user-goal" or "subfunction"
 \addfield{Level:}{User-goal}
@@ -181,14 +180,17 @@ SYS-100 & The system allows to import a flow network from a file.\\\hline
 \addfield{Primary Actor:}{End-User}
 
 %Preconditions: What must be true on start and worth telling the reader?
-\addfield{Preconditions:}{Selected tool for removing component}
+\addfield{Preconditions:}{Component selected}
 
 %Main Success Scenario: A typical, unconditional happy path scenario of success.
 \addscenario{Main Success Scenario:}{
-	\item User selects component on pipeline network grid
+	\item User right clicks on the component
+	\item System shows context menu with options
+	\item User clicks on Delete
 	\item System removes selected component
 	\item System removes pipelines connected to component, if component isn't pipeline
 	\item System updates internal state
+	\item System updates the changes on the screen
 }
 
 %Extensions: Alternate scenarios of success or failure.
@@ -199,37 +201,67 @@ SYS-100 & The system allows to import a flow network from a file.\\\hline
 \end{usecase}
 
 \begin{usecase}
-
-\addtitle{Use Case 6}{Changing current flow of a pump} 
-
-%Level: "user-goal" or "subfunction"
-\addfield{Level:}{User-goal}
-
-%Primary Actor: Calls on the system to deliver its services.
-\addfield{Primary Actor:}{End-User}
-
-%Preconditions: What must be true on start and worth telling the reader?
-\addfield{Preconditions:}{Selected pump}
-
-%Main Success Scenario: A typical, unconditional happy path scenario of success.
-\addscenario{Main Success Scenario:}{
-	\item User inputs new flow
-	\item System updates flow network grid.
-}
-
-%Extensions: Alternate scenarios of success or failure.
-\addscenario{Extensions:}{
-	\item[1.a] The new flow exceeds capacity
+	
+	\addtitle{Use Case 6}{Duplicating component on flow network grid} 
+	
+	%Level: "user-goal" or "subfunction"
+	\addfield{Level:}{User-goal}
+	
+	%Primary Actor: Calls on the system to deliver its services.
+	\addfield{Primary Actor:}{End-User}
+	
+	%Preconditions: What must be true on start and worth telling the reader?
+	\addfield{Preconditions:}{Component selected}
+	
+	%Main Success Scenario: A typical, unconditional happy path scenario of success.
+	\addscenario{Main Success Scenario:}{
+		\item User right clicks on the component
+		\item System shows context menu with options
+		\item User clicks on Duplicate
+		\item Go to Use case 1
+		\item System sets the properties the same as original component
+	}
+	
+	%Extensions: Alternate scenarios of success or failure.
+	\addscenario{Extensions:}{
+		\item[2.a] User right click on pipeline
 		\begin{enumerate}
-		\item[1.] System informs end-user that the selected component can't be used and the maximum flow possible is used
+			\item[1.] Context menu don't show the option to duplicate
+			\item[2.] End of use case.
 		\end{enumerate}
-}
+	}
+	
+\end{usecase}
 
+\begin{usecase}
+	
+	\addtitle{Use Case 7}{Moving component (exclusing pipeline) on flow network grid} 
+	
+	%Level: "user-goal" or "subfunction"
+	\addfield{Level:}{User-goal}
+	
+	%Primary Actor: Calls on the system to deliver its services.
+	\addfield{Primary Actor:}{End-User}
+	
+	%Preconditions: What must be true on start and worth telling the reader?
+	\addfield{Preconditions:}{Component selected}
+	
+	%Main Success Scenario: A typical, unconditional happy path scenario of success.
+	\addscenario{Main Success Scenario:}{
+		\item User drags component to new position
+		\item System redraws flow network
+	}
+	
+	%Extensions: Alternate scenarios of success or failure.
+	%\addscenario{Extensions:}{
+
+	%}
+	
 \end{usecase}
 
 \begin{usecase}
 
-\addtitle{Use Case 7}{Change output adjustable splitter} 
+\addtitle{Use Case 8}{Load file} 
 
 %Level: "user-goal" or "subfunction"
 \addfield{Level:}{User-goal}
@@ -238,58 +270,11 @@ SYS-100 & The system allows to import a flow network from a file.\\\hline
 \addfield{Primary Actor:}{End-User}
 
 %Preconditions: What must be true on start and worth telling the reader?
-\addfield{Preconditions:}{Selected adjustable splitter}
+\addfield{Preconditions:}{User clicks on "Open" file button}
 
 %Main Success Scenario: A typical, unconditional happy path scenario of success.
 \addscenario{Main Success Scenario:}{
-	\item User uses slider to adjust the output.
-	\item System updated the flow network grid.
-}
-
-%Extensions: Alternate scenarios of success or failure.
-\addscenario{Extensions:}{
-	\item[1.a] Component isn't adjustable splitter.
-		\begin{enumerate}
-		\item[1.] The option to adjust the flow isn't shown.
-		\end{enumerate}
-}
-
-\end{usecase}
-
-\begin{usecase}
-
-\addtitle{Use Case 8}{Current flow} 
-
-%Level: "user-goal" or "subfunction"
-\addfield{Level:}{User-goal}
-
-%Primary Actor: Calls on the system to deliver its services.
-\addfield{Primary Actor:}{End-User}
-
-%Preconditions: What must be true on start and worth telling the reader?
-\addfield{Preconditions:}{Pipeline connection}
-
-%Main Success Scenario: A typical, unconditional happy path scenario of success.
-\addscenario{Main Success Scenario:}{
-	\item System displays current flow in pipeline.
-}
-
-\end{usecase}
-\begin{usecase}
-
-\addtitle{Use Case 9}{Load file} 
-
-%Level: "user-goal" or "subfunction"
-\addfield{Level:}{User-goal}
-
-%Primary Actor: Calls on the system to deliver its services.
-\addfield{Primary Actor:}{End-User}
-
-%Preconditions: What must be true on start and worth telling the reader?
-\addfield{Preconditions:}{Saved file with pipeline network}
-
-%Main Success Scenario: A typical, unconditional happy path scenario of success.
-\addscenario{Main Success Scenario:}{
+	\item System shows a file dialog-box.
 	\item User selects file to open.
 	\item System closes previous project.
 	\item System loads the file.
@@ -297,22 +282,21 @@ SYS-100 & The system allows to import a flow network from a file.\\\hline
 
 %Extensions: Alternate scenarios of success or failure.
 \addscenario{Extensions:}{
+	\item[1.a] Another project is open
+		\begin{enumerate}
+			\item[1.] System asks if users wants, to save the project, if the user chooses cancel that will end the use case.
+		\end{enumerate}
 	\item[2.a] File can't be loaded.
 		\begin{enumerate}
 		\item[1.] System informs user that file can't be loaded and given the choice to stop or choose another file.
 		\item[2.] End of use case.
 		\end{enumerate}
-	\item[2.b] Another project is open
-		\begin{enumerate}
-		\item[1.] System asks if users wants, to save project, that is already open, before closing it and opening another project.
-		\item[2.] End of use case.
-		\end{enumerate}
 }
 
 \end{usecase}
 \begin{usecase}
 
-\addtitle{Use Case 10}{Save file} 
+\addtitle{Use Case 9}{Save file} 
 
 %Level: "user-goal" or "subfunction"
 \addfield{Level:}{User-goal}
@@ -321,27 +305,23 @@ SYS-100 & The system allows to import a flow network from a file.\\\hline
 \addfield{Primary Actor:}{End-User}
 
 %Preconditions: What must be true on start and worth telling the reader?
-\addfield{Preconditions:}{Open pipeline network project}
+\addfield{Preconditions:}{User click the "Save" file button}
 
 %Main Success Scenario: A typical, unconditional happy path scenario of success.
 \addscenario{Main Success Scenario:}{
-	\item User click the "Save" button
 	\item System saves the file.
 }
 %Extensions: Alternate scenarios of success or failure.
 \addscenario{Extensions:}{
-	\item[2.a] Project file has not been saved on the device yet.
+	\item[1.a] Project file has not been saved on the device yet.
 		\begin{enumerate}
-		\item[1.] A saving dialogue window pops up.
-		\item[2.] User chooses the directory where the file will be stored, and names the file.
-		\item[3.] User clicks " OK ".
-		\item[4.] System saves the file.
+		\item[1.] Go to Use Case 10
 		\end{enumerate}
 }
 \end{usecase}
 \begin{usecase}
 
-\addtitle{Use Case 11}{Save file as a new file} 
+\addtitle{Use Case 10}{Save file as a new file} 
 
 %Level: "user-goal" or "subfunction"
 \addfield{Level:}{User-goal}
@@ -350,23 +330,21 @@ SYS-100 & The system allows to import a flow network from a file.\\\hline
 \addfield{Primary Actor:}{End-User}
 
 %Preconditions: What must be true on start and worth telling the reader?
-\addfield{Preconditions:}{Open pipeline network project}
+\addfield{Preconditions:}{User clicks "Save as" button.}
 
 %Main Success Scenario: A typical, unconditional happy path scenario of success.
 \addscenario{Main Success Scenario:}{
-	\item User clicks " Save as " button.
-	\item A saving dialogue window pops up.
+	\item System shows a file dialog-box.
 	\item User chooses the directory where the file will be stored, and names the file.
-	\item User clicks " OK ".
 	\item System saves the file.
 }
     
 %Extensions: Alternate scenarios of success or failure.
 \addscenario{Extensions:}{
-	\item[3.a] User mis-clicks the " Save as " button and does not want to save the file as a new file.
+	\item[1.a] User didn't intend to save file
 		\begin{enumerate}
-		\item[1.] User clicks " Cancel ".
-		\item[2.] Dialogue window closes.
+		\item[1.] User clicks "Cancel".
+		\item[2.] End of use case
 		\end{enumerate}
 }
 \end{usecase}
