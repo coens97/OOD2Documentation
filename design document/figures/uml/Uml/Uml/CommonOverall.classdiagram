@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="7962f1df-a4c6-4ec8-ac31-2ef7f998bc77" name="CommonOverall" linkedPackageId="bbfe24ce-3910-47e1-996f-96d80d917909" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="3da8a3c8-df25-4ce2-9cf8-075a7960edc7">
+      <profileInstance Id="e9e00184-8496-49c7-b2de-6ebaf7cd3468" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="0de577d9-e565-481c-9b7a-57d65a580a86">
+      <profileInstance Id="734bbc28-05db-4d73-b761-63a0f45c7bc2" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="26cc37d1-eab5-4a4e-8f0b-0a020e229cf4" name="MergerEntity" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2669392a-db36-4b68-a017-37aa2dc360ab" />
+        <suppliersInternal>
+          <interfaceRealization Id="de73a7eb-4149-448e-84c2-48cbaeb814a5">
+            <interfaceMoniker Id="6d636837-5687-4b77-9ae1-b4d365171f10" LastKnownName="IComponent" />
+            <elementDefinition Id="cb389f8a-08c8-4467-a8a9-37991fa96956" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="d5b3b84b-0990-48ea-aa59-bd7a0fd56671" name="FlowInput" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="48973379-8827-4efb-97f9-646fe2c507c5" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="8c2f52ec-cdbc-44d5-9fbc-97b627387448" LastKnownName="Integer[]" />
+            </type_NamedElement>
+          </property>
+          <property Id="9682fdc6-72e5-4895-ad9d-20d3519e7d8a" name="FlowOutput" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6739b680-3328-404b-bb65-51f30b58ddc6" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="8c2f52ec-cdbc-44d5-9fbc-97b627387448" LastKnownName="Integer[]" />
+            </type_NamedElement>
+          </property>
+          <property Id="950a2aff-95cf-4bac-a5b8-a0c05ddc0f54" name="Position" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="305f3021-7f45-43de-9437-c2a894a3347e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="227c5bd4-9507-43ef-8d2f-169456b5deae" LastKnownName="PointEntity" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="8c2f52ec-cdbc-44d5-9fbc-97b627387448" name="Integer[]" isAbstract="false" isLeaf="false" cachedFullName="Integer[]">
+        <elementDefinition Id="0b2198bf-6f67-4ef6-b0b9-1f3480169d5d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="227c5bd4-9507-43ef-8d2f-169456b5deae" name="PointEntity" isAbstract="false" isLeaf="false" cachedFullName="Uml::PointEntity">
+        <elementDefinition Id="222727a4-f8a3-4b0b-886a-627f86c7a6be" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8f3436a2-bc8c-4bb8-98ea-90e6ef5eddb7" name="PipeEntity" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0b0f0c90-7a29-4b53-b615-00b5aaa4526f" />
+        <ownedAttributesInternal>
+          <property Id="6cccc4c9-c3b7-4b5f-9621-cfb077c2587c" name="CurrentFlow" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1c3298ba-aeee-41cf-8c3d-f535a349b337" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="2f782bbf-a8ca-4e48-99f5-ff91f863c20f" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="b783d1ce-a917-4705-af33-403dcad2b686" name="MaximumFlow" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="12ca0115-7659-48b6-85a5-ee36db08e690" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="2f782bbf-a8ca-4e48-99f5-ff91f863c20f" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="308c54d2-9003-4453-8811-2b389753c7a8" name="Path" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="20017385-d457-46a3-a880-de5a0de0c447" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="684f0e6e-c9a5-4582-8f5f-5e3ed7e93e7d" LastKnownName="List&lt;PointEntity&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="623392ba-deb8-49fe-9072-b2f27cb3bd51" name="StartComponentIndex" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="755a5cdd-3dab-4dc0-876e-0a0b60dc890b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="213705f7-8033-4b58-a7d9-af3047c33e19" LastKnownName="Int" />
+            </type_NamedElement>
+          </property>
+          <property Id="05ac295d-30e4-497a-b7a6-5f67a8827b00" name="EndComponentIndex" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d0b9070e-6129-4505-ba01-53d5edc82228" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="213705f7-8033-4b58-a7d9-af3047c33e19" LastKnownName="Int" />
+            </type_NamedElement>
+          </property>
+          <property Id="458a0607-d5d6-4408-a8cc-dded5ad2bfa0" name="StartComponent" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b9649df5-8aff-4c17-8f91-6fa8852092b1" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="ed6c58fa-0ac7-4c95-8d4e-184ba7c18af5" LastKnownName="IFlowOutput" />
+            </type_NamedElement>
+          </property>
+          <property Id="a566ebb4-358c-4e06-9254-7ade000cc35d" name="EndComponent" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8f8cbeec-ffdb-4aa9-93ac-9bae35664f7b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="51fecdfe-6462-4028-8a88-17fbfee01172" LastKnownName="IFlowInput" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="2f782bbf-a8ca-4e48-99f5-ff91f863c20f" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="684f0e6e-c9a5-4582-8f5f-5e3ed7e93e7d" name="List&lt;PointEntity&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;PointEntity&gt;">
+        <elementDefinition Id="7971657f-c149-4737-a783-214489dba436" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="213705f7-8033-4b58-a7d9-af3047c33e19" name="Int" isAbstract="false" isLeaf="false" cachedFullName="Int">
+        <elementDefinition Id="b3e03460-bd28-4922-8842-901c0e6e8935" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b161b58b-81e4-45a6-bc51-ddd6c2c7b753" name="PointEntity" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="222727a4-f8a3-4b0b-886a-627f86c7a6be" />
+        <ownedAttributesInternal>
+          <property Id="321610f6-8ede-4e0e-8480-2b7aaa5b9cbf" name="X" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2651c867-1b31-40d8-b9dc-7b769e0ae47f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="213705f7-8033-4b58-a7d9-af3047c33e19" LastKnownName="Int" />
+            </type_NamedElement>
+          </property>
+          <property Id="27bc980f-9478-48f7-b4ad-b5279d9cfd1d" name="Y" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8ec8ac55-2097-4c96-af77-ce01ddf94c25" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="213705f7-8033-4b58-a7d9-af3047c33e19" LastKnownName="Int" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="6d636837-5687-4b77-9ae1-b4d365171f10" name="IComponent" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1eded771-87e3-4e1d-97dc-2c4ee4cdb8c1" />
+        <ownedAttributes>
+          <property Id="d6bce6a7-2b10-495d-a8f3-069c441eb0ae" name="Position" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f793d010-e53a-42a8-bb94-89e196e0e5eb" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="227c5bd4-9507-43ef-8d2f-169456b5deae" LastKnownName="PointEntity" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributes>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="79ae247e-ee4a-4c38-8a7b-c918b9e09067" name="PumpEntity " isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="41f88aeb-10a2-49f2-bc61-52545eaca20b" />
+        <suppliersInternal>
+          <interfaceRealization Id="ca269661-4e0d-4bc2-a381-4176fdd82508">
+            <interfaceMoniker Id="6d636837-5687-4b77-9ae1-b4d365171f10" LastKnownName="IComponent" />
+            <elementDefinition Id="7d6e50dc-0a96-4176-a034-10ce04908844" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="fd31295e-ad11-40a3-a2d7-b4587a3297d6" name="Position" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="32bbb41f-d071-48b8-85be-35b83341a303" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="227c5bd4-9507-43ef-8d2f-169456b5deae" LastKnownName="PointEntity" />
+            </type_NamedElement>
+          </property>
+          <property Id="9b83be01-c8f7-44b2-a7b4-7660c2a7ecd9" name="CurrentFlow" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ef61fc51-abde-4c55-af35-e8b85c93bf85" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="2f782bbf-a8ca-4e48-99f5-ff91f863c20f" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="3f72a423-4b94-4438-ac82-4500dae8456a" name="MaximumFlow" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c4ecab1e-4b00-496f-909c-bac2056e35ec" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="2f782bbf-a8ca-4e48-99f5-ff91f863c20f" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="25885f6d-b90d-4a3a-a960-3c65e0db36d9" name="FlowOutput" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a103ab2e-9bdb-4a86-85bb-f9d78e8f1ed4" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="8c2f52ec-cdbc-44d5-9fbc-97b627387448" LastKnownName="Integer[]" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3b1e1a55-bfd2-4e28-aa44-85c592e21190" name="SinkEntity" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e5feecfb-8cf9-430f-aede-f3e8ef64cb55" />
+        <suppliersInternal>
+          <interfaceRealization Id="fe18ccb7-8f8d-4a3f-a9c4-4afcd92da0ff">
+            <interfaceMoniker Id="6d636837-5687-4b77-9ae1-b4d365171f10" LastKnownName="IComponent" />
+            <elementDefinition Id="acebbfd4-45cb-43bd-b644-6fdd896ffd40" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="7aecbd04-c93e-48eb-b398-59078de0a9c5" name="FlowInput" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a8c4019c-5fce-48a4-a3bc-72f309f01116" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="8c2f52ec-cdbc-44d5-9fbc-97b627387448" LastKnownName="Integer[]" />
+            </type_NamedElement>
+          </property>
+          <property Id="670a127e-0ea7-4bab-b645-978f56cbc11f" name="Position" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="35441e01-b1f9-4711-9ec4-6f68e43c4b43" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="227c5bd4-9507-43ef-8d2f-169456b5deae" LastKnownName="PointEntity" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="302d8b88-2fb8-4f25-a027-9715d22d7cd4" name="SplitterEntity" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="aff10cf2-5a7a-4492-9ab0-86d7522d0377" />
+        <suppliersInternal>
+          <interfaceRealization Id="f37a58f9-c4e1-45ee-bbbf-2cae7f595760">
+            <interfaceMoniker Id="6d636837-5687-4b77-9ae1-b4d365171f10" LastKnownName="IComponent" />
+            <elementDefinition Id="22cec92d-41a6-4af0-9da7-d425b11240ed" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="59837086-b072-4352-8f50-1f5450ec5ea7" name="FlowInput" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c9492e03-d34e-4dd6-954b-03f900219384" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="a88a87f7-08b3-4d72-9348-d1f95fc3c6eb" LastKnownName="Double[]" />
+            </type_NamedElement>
+          </property>
+          <property Id="3d54ca80-8bca-491c-908d-b4f3c063696e" name="FlowOutput" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="69006341-5760-4f7e-a879-ca959165b440" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="a88a87f7-08b3-4d72-9348-d1f95fc3c6eb" LastKnownName="Double[]" />
+            </type_NamedElement>
+          </property>
+          <property Id="3fe51407-df26-4386-a9e7-ba95efa117b3" name="Position" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6bc788d2-dbce-40e2-a460-4d2e6163ccdd" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="227c5bd4-9507-43ef-8d2f-169456b5deae" LastKnownName="PointEntity" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="a88a87f7-08b3-4d72-9348-d1f95fc3c6eb" name="Double[]" isAbstract="false" isLeaf="false" cachedFullName="Double[]">
+        <elementDefinition Id="c75788cd-6fe8-40da-a5dc-ea5c1519deaa" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="555b9b2b-bfc7-4622-b8a6-413643c0da83" name="FlowNetWorkEntity" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2425d559-80f9-4246-9ced-2d7160ccf160" />
+        <targetEnds>
+          <association Id="eeb427fd-8b39-42c5-9d00-039eca97a95b" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="6d636837-5687-4b77-9ae1-b4d365171f10" LastKnownName="IComponent" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fd4b4493-cc18-4a13-b9b5-720ab7c3062e" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a70576ec-5eba-4275-9691-562876e4437f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c408e1f9-30bb-4e3d-8385-8bb880db9f09" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <lowerValueInternal>
+                    <literalString Id="cb563d04-8def-430d-98c6-3f457ed6eabe" name="Lower" value="0">
+                      <elementDefinition Id="fd4c9648-c015-4d62-ab82-514ae6033d69" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="25f51a02-6b2f-4e15-94e9-55acdf5d8bc9" name="Upper" value="*">
+                      <elementDefinition Id="512e0151-d14a-45cf-952a-0a753878d3d8" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="69927e9b-28b4-40c5-9855-4677256c8257" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7096e4ce-c4e1-4608-8fbe-2c65ab81302b" />
+          </association>
+          <association Id="ca7bc70a-c850-4767-8d51-d2d07479be00" isDerived="false" sourceEndRoleName="Pipes" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="8f3436a2-bc8c-4bb8-98ea-90e6ef5eddb7" LastKnownName="PipeEntity" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="137e18fa-f2c6-4860-afd9-6f53ad95c6da" name="Pipes" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="52c82a20-cc20-4b2f-aec0-c4a58b38c715" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="276dc53e-08bb-490c-a2b0-4aea5d61ccd9" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="fc354f5f-7ad7-4878-af40-055c6165e876" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="865bc49f-f979-4051-b56e-2a6881f79c12" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="6c59cff8-6733-4f07-b037-94491f969984" name="Pipes" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c3bf5ab4-35ac-4174-882c-793d9c43abee" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e9569346-eb7a-49b5-8c16-9d2af8a1d762" LastKnownName="List&lt;PipeEntity&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="6e9dffd7-aef6-4b4b-9b50-d30b1fbc3939" name="Components" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="948f2d10-9593-42b8-8161-1d75b948ce1e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="eaa7b5e1-58f6-4147-be2c-3195be3af24d" LastKnownName="List&lt;IComponent&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="ed6c58fa-0ac7-4c95-8d4e-184ba7c18af5" name="IFlowOutput" isAbstract="false" isLeaf="false" cachedFullName="Uml::IFlowOutput">
+        <elementDefinition Id="05c25a56-95c5-40d5-91c8-5fee2ed290bd" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="51fecdfe-6462-4028-8a88-17fbfee01172" name="IFlowInput" isAbstract="false" isLeaf="false" cachedFullName="Uml::IFlowInput">
+        <elementDefinition Id="01759d60-6085-40e2-9a90-36ab8963a767" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e9569346-eb7a-49b5-8c16-9d2af8a1d762" name="List&lt;PipeEntity&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;PipeEntity&gt;">
+        <elementDefinition Id="510d1193-2dcb-4198-9e81-42fb96e4a7c2" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="eaa7b5e1-58f6-4147-be2c-3195be3af24d" name="List&lt;IComponent&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;IComponent&gt;">
+        <elementDefinition Id="0c9fdf1e-d81f-4391-92cc-a508734b14ec" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="bbfe24ce-3910-47e1-996f-96d80d917909" name="Uml">
+    <elementDefinition Id="6e07362e-7e1f-4cd5-bf4f-eb4177744791" />
+  </package>
+</logicalClassDesignerModel>
