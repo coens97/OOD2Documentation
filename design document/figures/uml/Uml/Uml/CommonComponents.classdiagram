@@ -1,5 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="5d08926d-5ba1-43f3-ad29-3d2f85948ff1" name="Common" linkedPackageId="62ddd59a-68bd-4c2d-8eee-6170eb51c259" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="5d08926d-5ba1-43f3-ad29-3d2f85948ff1" name="Common" linkedPackageId="62ddd59a-68bd-4c2d-8eee-6170eb51c259" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="b883118f-e4fe-4dc5-be6e-4b0d2dd99c16">
+      <elementDefinition Id="a1e2b9ad-48d1-475c-8b08-e3dac8af8933" />
+      <body>FlowOutput size is 1</body>
+      <annotatedElements>
+        <classMoniker Id="2d7a3c56-7fc9-450b-b6ff-d9e409c63d3a" LastKnownName="PumpEntity " />
+      </annotatedElements>
+    </comment>
+    <comment Id="35d90e15-32c3-4db0-817a-32fe552378b3">
+      <elementDefinition Id="dfa99e42-4d82-468f-89da-014a9aced446" />
+      <body>FlowInput size is 2
+FlowOutput size is 1</body>
+      <annotatedElements>
+        <classMoniker Id="6cab616a-b165-40c1-b8da-b351385c38f2" LastKnownName="MergerEntity" />
+      </annotatedElements>
+    </comment>
+    <comment Id="c39ecee7-3862-490b-ae64-3b257fd49db8">
+      <elementDefinition Id="d133c01c-3852-4abb-a913-3e4f7184c8ab" />
+      <body>FlowOutput size is 1</body>
+      <annotatedElements>
+        <classMoniker Id="ac6e6c18-0b72-4732-8228-446f9ea62715" LastKnownName="SinkEntity" />
+      </annotatedElements>
+    </comment>
+    <comment Id="9b867b17-d7af-44f1-9492-36428bdaaa74">
+      <elementDefinition Id="9cd321a1-0041-4d46-ab3f-4b133d496032" />
+      <body>FlowInput size is 1
+FlowOutput size is 2</body>
+      <annotatedElements>
+        <classMoniker Id="374a1ebf-957a-45bc-b4cb-20aedc222d01" LastKnownName="SplitterEntity" />
+      </annotatedElements>
+    </comment>
+    <comment Id="79536d92-2695-4e10-b795-ab5c287337be">
+      <elementDefinition Id="70c51b40-3342-4a0a-925a-7d536b2e7137" />
+      <body>PipeEntity is connected to an Output and an Input. Since a component can have more inputs/outputs the index (of the array) is an attribute </body>
+      <annotatedElements>
+        <classMoniker Id="14cb2d3b-e1bc-422d-af8c-d93d554ffda9" LastKnownName="PipeEntity" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <Interface Id="3a2a0449-b3c5-44ff-baa8-c523f4c7dc04" name="IFlowOutput" isAbstract="false" isLeaf="false">
@@ -95,7 +134,7 @@
                     </literalString>
                   </lowerValueInternal>
                   <upperValueInternal>
-                    <literalString Id="9e606cde-47cb-468b-9092-3883025e4d64" name="Upper" value="1">
+                    <literalString Id="9e606cde-47cb-468b-9092-3883025e4d64" name="Upper" value="*">
                       <elementDefinition Id="c0a30269-3978-4673-9c7a-135c113fbaa8" />
                     </literalString>
                   </upperValueInternal>
@@ -121,7 +160,7 @@
                     </literalString>
                   </lowerValueInternal>
                   <upperValueInternal>
-                    <literalString Id="39d3b94f-0b11-47da-bf9e-ea65a6acb52f" name="Upper" value="1">
+                    <literalString Id="39d3b94f-0b11-47da-bf9e-ea65a6acb52f" name="Upper" value="*">
                       <elementDefinition Id="30500d63-1429-4b2c-a426-03914bb569e6" />
                     </literalString>
                   </upperValueInternal>

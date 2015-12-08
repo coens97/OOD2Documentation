@@ -1,8 +1,62 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="6e07362e-7e1f-4cd5-bf4f-eb4177744791"
   name="Uml" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="a1e2b9ad-48d1-475c-8b08-e3dac8af8933">
+      <body>FlowOutput size is 1</body>
+      <annotatedElements>
+        <classMoniker
+          Id="41f88aeb-10a2-49f2-bc61-52545eaca20b"
+          LastKnownName="PumpEntity "
+          LastKnownLocation="Uml.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="dfa99e42-4d82-468f-89da-014a9aced446">
+      <body>FlowInput size is 2
+FlowOutput size is 1</body>
+      <annotatedElements>
+        <classMoniker
+          Id="2669392a-db36-4b68-a017-37aa2dc360ab"
+          LastKnownName="MergerEntity"
+          LastKnownLocation="Uml.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="d133c01c-3852-4abb-a913-3e4f7184c8ab">
+      <body>FlowOutput size is 1</body>
+      <annotatedElements>
+        <classMoniker
+          Id="e5feecfb-8cf9-430f-aede-f3e8ef64cb55"
+          LastKnownName="SinkEntity"
+          LastKnownLocation="Uml.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="9cd321a1-0041-4d46-ab3f-4b133d496032">
+      <body>FlowInput size is 1
+FlowOutput size is 2</body>
+      <annotatedElements>
+        <classMoniker
+          Id="aff10cf2-5a7a-4492-9ab0-86d7522d0377"
+          LastKnownName="SplitterEntity"
+          LastKnownLocation="Uml.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="70c51b40-3342-4a0a-925a-7d536b2e7137">
+      <body>PipeEntity is connected to an Output and an Input. Since a component can have more inputs/outputs the index (of the array) is an attribute </body>
+      <annotatedElements>
+        <classMoniker
+          Id="0b0f0c90-7a29-4b53-b615-00b5aaa4526f"
+          LastKnownName="PipeEntity"
+          LastKnownLocation="Uml.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -244,7 +298,7 @@
                     <literalString
                       Id="c0a30269-3978-4673-9c7a-135c113fbaa8"
                       name="Upper"
-                      value="1" />
+                      value="*" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -295,7 +349,7 @@
                     <literalString
                       Id="30500d63-1429-4b2c-a426-03914bb569e6"
                       name="Upper"
-                      value="1" />
+                      value="*" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -1058,56 +1112,6 @@
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="b213b7f9-ccb4-46b2-b040-d61b5a7510a4"
-            isDerived="false"
-            sourceEndRoleName=""
-            targetEndRoleName=""
-            isLeaf="false"
-            isAbstract="false">
-            <interfaceMoniker
-              Id="59d537e4-052f-458c-b2b1-3b57324a13d1"
-              LastKnownName="IDrawable"
-              LastKnownLocation="Uml.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="57477c0f-5ce5-42f9-ba86-82a09ad7ca20"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Composite"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="6950df74-7ddd-4bbd-8c68-6fa6fa7910d7"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="true">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="c9713f1e-b409-441b-983d-a7e1b5a4d829"
-                      name="Lower"
-                      value="0" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="c8d97507-805b-483a-962b-55e290c3ea0a"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
             Id="1b1f35b3-ba58-4a3e-944d-1a225dcbabd2"
             isDerived="false"
             sourceEndRoleName="DataBinding"
@@ -1142,6 +1146,56 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7cdcc0e6-fd2d-45b1-af67-e851f93fada0"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="dba52f35-9b1d-49b9-b71e-4f854808bda2"
+              LastKnownName="Drawable"
+              LastKnownLocation="Uml.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="75d3e489-86ff-46ff-ac5a-08a35961d78d"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7fa99e68-0b59-4492-8bb0-9f6eb3c921fd"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="8da80e6e-2a0c-454a-be1c-82a27b47d873"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="66974702-552e-4bac-883a-1514e4b733ed"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -1187,143 +1241,22 @@
         name="List&lt;IDrawable&gt;" />
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <Interface
-        Id="59d537e4-052f-458c-b2b1-3b57324a13d1"
-        name="IDrawable"
-        isAbstract="false"
-        isLeaf="false">
-        <ownedOperations>
-          <operation
-            Id="cc70f29f-598f-470a-addc-4c4756a8a191"
-            name="Draw"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="true"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="6206bb93-e7f3-47f0-9222-6ac6953474fd"
-                  name="Graphics g"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="d6fef7d3-e1ed-4d61-98f9-1ccb7b2ef619"
-            name="PossibleMouseSelect"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="true"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="30ef0f2f-2545-414d-8dc5-7bd22ad337d4"
-                  name="int x"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="a24ebcda-df1d-4798-84bd-d3badf566267"
-                  name="int y"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="1ba4ddbd-842d-4639-8e65-70c4271a1033"
-                  direction="Return">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="b4727c54-77da-4653-8936-b244fa35c901"
-                      LastKnownName="bool"
-                      LastKnownLocation="Uml.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-        </ownedOperations>
-      </Interface>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <class
         Id="0321adfc-54df-4b32-853c-44741207bc77"
         name="MergerDrawable"
-        isAbstract="false"
+        isAbstract="true"
         isLeaf="false"
         isActiveClass="false">
-        <suppliersInternal>
-          <interfaceRealization
-            Id="96688345-fb3a-4d99-b0cb-494a87991caa">
-            <interfaceMoniker
-              Id="59d537e4-052f-458c-b2b1-3b57324a13d1"
-              LastKnownName="IDrawable"
+        <generalsInternal>
+          <generalization
+            Id="b5a11c8d-3f08-4671-b21e-8d4a93e0280f"
+            isSubstitutable="false">
+            <classMoniker
+              Id="dba52f35-9b1d-49b9-b71e-4f854808bda2"
+              LastKnownName="Drawable"
               LastKnownLocation="Uml.uml" />
-          </interfaceRealization>
-        </suppliersInternal>
-        <ownedOperationsInternal>
-          <operation
-            Id="19f4ef47-42ae-4caa-808e-98a4702e503a"
-            name="Draw"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="9aef8414-b6dc-4b7a-8194-e6bfef46bdd0"
-                  name="Graphics g"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="601c32f0-103c-4c4f-bc9f-5787960edac8"
-            name="PossibleMouseSelect"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="55dd0dc0-fc74-446d-9550-a9ef6706a2ca"
-                  name="int x"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="771c1838-aeda-4011-9081-fbae18933eca"
-                  name="int y"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="3faa5f7c-2eb5-4f90-b3b3-97a32350e8d3"
-                  direction="Return">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="b4727c54-77da-4653-8936-b244fa35c901"
-                      LastKnownName="bool"
-                      LastKnownLocation="Uml.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-        </ownedOperationsInternal>
+          </generalization>
+        </generalsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1333,72 +1266,16 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <suppliersInternal>
-          <interfaceRealization
-            Id="341aefdc-8107-481f-a60f-ca8ac0b477e4">
-            <interfaceMoniker
-              Id="59d537e4-052f-458c-b2b1-3b57324a13d1"
-              LastKnownName="IDrawable"
+        <generalsInternal>
+          <generalization
+            Id="5349cad8-5949-4ea3-9e4f-cd7db493994e"
+            isSubstitutable="false">
+            <classMoniker
+              Id="dba52f35-9b1d-49b9-b71e-4f854808bda2"
+              LastKnownName="Drawable"
               LastKnownLocation="Uml.uml" />
-          </interfaceRealization>
-        </suppliersInternal>
-        <ownedOperationsInternal>
-          <operation
-            Id="097e2a79-e26b-49f9-a991-1494bdca6e84"
-            name="Draw"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="7012f438-4afd-4f85-a399-139651f7da6a"
-                  name="Graphics g"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="a50759c9-410f-4593-8d94-8a4a04045fca"
-            name="PossibleMouseSelect"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="7fa801c2-515a-452e-8076-da584ed23a57"
-                  name="int x"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="24603d35-6a11-455c-8d8a-86c171969aaf"
-                  name="int y"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="5ea8115e-280d-4ab1-91a3-d13488edd9d8"
-                  direction="Return">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="b4727c54-77da-4653-8936-b244fa35c901"
-                      LastKnownName="bool"
-                      LastKnownLocation="Uml.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-        </ownedOperationsInternal>
+          </generalization>
+        </generalsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1408,72 +1285,16 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <suppliersInternal>
-          <interfaceRealization
-            Id="21ae012f-b4ed-4274-b1a3-781ee77620bf">
-            <interfaceMoniker
-              Id="59d537e4-052f-458c-b2b1-3b57324a13d1"
-              LastKnownName="IDrawable"
+        <generalsInternal>
+          <generalization
+            Id="65bab291-5129-4ab5-b2f5-afbc3b2cee3d"
+            isSubstitutable="false">
+            <classMoniker
+              Id="dba52f35-9b1d-49b9-b71e-4f854808bda2"
+              LastKnownName="Drawable"
               LastKnownLocation="Uml.uml" />
-          </interfaceRealization>
-        </suppliersInternal>
-        <ownedOperationsInternal>
-          <operation
-            Id="d09d570a-72ca-45f6-aaac-bf7f654b0943"
-            name="Draw"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="f7087a07-1419-4c7f-bdf3-62aabde9139e"
-                  name="Graphics g"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="eedb48cb-ef66-48d1-9ca8-042ef18aa915"
-            name="PossibleMouseSelect"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="32655d07-ef59-4e7a-b165-aba962b6ab84"
-                  name="int x"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="717c48bf-4549-4fcd-9d4f-63ee82673d18"
-                  name="int y"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="b6bd1f6f-7279-4bdd-a269-d8cc6ca45368"
-                  direction="Return">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="b4727c54-77da-4653-8936-b244fa35c901"
-                      LastKnownName="bool"
-                      LastKnownLocation="Uml.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-        </ownedOperationsInternal>
+          </generalization>
+        </generalsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1483,72 +1304,16 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <suppliersInternal>
-          <interfaceRealization
-            Id="1c08167a-e289-4f68-905b-9774906e865b">
-            <interfaceMoniker
-              Id="59d537e4-052f-458c-b2b1-3b57324a13d1"
-              LastKnownName="IDrawable"
+        <generalsInternal>
+          <generalization
+            Id="361bf429-e1b2-4845-86ce-8cdcf488ae34"
+            isSubstitutable="false">
+            <classMoniker
+              Id="dba52f35-9b1d-49b9-b71e-4f854808bda2"
+              LastKnownName="Drawable"
               LastKnownLocation="Uml.uml" />
-          </interfaceRealization>
-        </suppliersInternal>
-        <ownedOperationsInternal>
-          <operation
-            Id="73af021f-d5ab-48e3-94a4-498aca58da5e"
-            name="Draw"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="e430e05f-0d17-4ba3-a207-3344544ad9a4"
-                  name="Graphics g"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="8b1a7d46-4111-45c8-88ce-eaf4a8feb310"
-            name="PossibleMouseSelect"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="69c4c48f-4373-450c-84ae-55df3abb3a0f"
-                  name="int x"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="52ce8687-5899-4752-bceb-7b00a2174ec7"
-                  name="int y"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="d964358d-2343-4c1f-9783-0a755a8f36ef"
-                  direction="Return">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="b4727c54-77da-4653-8936-b244fa35c901"
-                      LastKnownName="bool"
-                      LastKnownLocation="Uml.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-        </ownedOperationsInternal>
+          </generalization>
+        </generalsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -2140,6 +1905,139 @@
             isComposite="false" />
         </ownedAttributes>
       </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="dba52f35-9b1d-49b9-b71e-4f854808bda2"
+        name="Drawable"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="d3df33ee-9d2e-4f33-94e3-19c8b8fbd28b"
+            name="Position"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="4a66adb5-5770-4b30-9f49-85ebbdff912e"
+                LastKnownName="Point"
+                LastKnownLocation="Uml.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="dbdafe94-a6dc-4ddb-8351-c3e15a7adcc6"
+            name="W"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ffeb1141-f3a7-4aa3-982f-b2651a2783db"
+                LastKnownName="double"
+                LastKnownLocation="Uml.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5b3ec83e-8adf-4455-bc89-472768952bec"
+            name="H"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ffeb1141-f3a7-4aa3-982f-b2651a2783db"
+                LastKnownName="double"
+                LastKnownLocation="Uml.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="376a8b51-404e-4605-9803-cc799aff9ccb"
+            name="Draw"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bb05713d-1ecb-4b38-bcae-680b67a5ac12"
+                  name="Graphics g"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ac4d5e8e-e801-44e2-a5c6-b5ecbc3774dc"
+            name="PossibleMouseSelect"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6ea3db38-5909-4714-9d56-ce94f4125e23"
+                  name="int x"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="51ff0ee5-5eef-4faa-bd7b-fdf4da0655b2"
+                  name="int y"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dbd0840b-5a00-464e-97f9-b711f86d343e"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="b4727c54-77da-4653-8936-b244fa35c901"
+                      LastKnownName="bool"
+                      LastKnownLocation="Uml.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="43eb3f01-2d1e-4675-a5aa-4657c8bf10b7"
+        name="int" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="ffeb1141-f3a7-4aa3-982f-b2651a2783db"
+        name="double" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
