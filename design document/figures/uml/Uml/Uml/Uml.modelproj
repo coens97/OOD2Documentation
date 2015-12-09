@@ -22,12 +22,33 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="BusinnessAddNewComponent.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="BusinnessAddNewComponent.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>BusinnessAddNewComponent.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="BusinessOverall.classdiagram">
       <SubType>Content</SubType>
     </Content>
     <Content Include="BusinessOverall.classdiagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>BusinessOverall.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="OverallLoadFile.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="OverallLoadFile.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>OverallLoadFile.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="PresentationCreateConnection.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PresentationCreateConnection.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>PresentationCreateConnection.sequencediagram</DependentUpon>
     </Content>
     <Content Include="PresentationOverall.classdiagram">
       <SubType>Content</SubType>
