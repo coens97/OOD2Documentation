@@ -27,9 +27,7 @@ SYS-040 & The system allows to remove components including pipelines.\\\hline
 SYS-040A & All the pipelines connected to the removed component will also be removed.\\\hline
 SYS-050 & The system allows to change the flow output of a pump within his range.\\\hline
 SYS-060 & The system allows to change the distribution of the flow from splitter going to the top and bottom output.\\\hline
-SYS-070 & The system displays the flow going through the pipelines.\\\hline
 SYS-070A & The system displays the pipeline red in case the flow exceeds the safety limit.\\\hline
-SYS-080 & The system displays the flow transported to a sink.\\\hline
 SYS-090 & The system allows to export the flow network to a file.\\\hline
 SYS-100 & The system allows to import a flow network from a file.\\\hline
 \end{tabularx}
@@ -230,32 +228,6 @@ SYS-100 & The system allows to import a flow network from a file.\\\hline
 			\item[2.] End of use case.
 		\end{enumerate}
 	}
-	
-\end{usecase}
-
-\begin{usecase}
-	
-	\addtitle{Use Case 7}{Moving component (exclusing pipeline) on flow network grid} 
-	
-	%Level: "user-goal" or "subfunction"
-	\addfield{Level:}{User-goal}
-	
-	%Primary Actor: Calls on the system to deliver its services.
-	\addfield{Primary Actor:}{End-User}
-	
-	%Preconditions: What must be true on start and worth telling the reader?
-	\addfield{Preconditions:}{Component selected}
-	
-	%Main Success Scenario: A typical, unconditional happy path scenario of success.
-	\addscenario{Main Success Scenario:}{
-		\item User drags component to new position
-		\item System redraws flow network
-	}
-	
-	%Extensions: Alternate scenarios of success or failure.
-	%\addscenario{Extensions:}{
-
-	%}
 	
 \end{usecase}
 
