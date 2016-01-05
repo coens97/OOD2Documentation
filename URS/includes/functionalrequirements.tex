@@ -182,9 +182,9 @@ SYS-100 & The system allows to import a flow network from a file.\\\hline
 
 %Main Success Scenario: A typical, unconditional happy path scenario of success.
 \addscenario{Main Success Scenario:}{
-	\item User right clicks on the component
-	\item System shows context menu with options
-	\item User clicks on Delete
+	\item User clicks on delete button
+	\item User clicks on component
+	\item System asks if user wants to continue
 	\item System removes selected component
 	\item System removes pipelines connected to component, if component isn't pipeline
 	\item System updates internal state
@@ -192,9 +192,12 @@ SYS-100 & The system allows to import a flow network from a file.\\\hline
 }
 
 %Extensions: Alternate scenarios of success or failure.
-%\addscenario{Extensions:}{
-
-%}
+\addscenario{Extensions:}{
+	\item[3.a] User doesn't want to delete the component
+	\begin{enumerate}
+		\item[1.] End use case
+	\end{enumerate}
+}
 
 \end{usecase}
 
@@ -213,9 +216,8 @@ SYS-100 & The system allows to import a flow network from a file.\\\hline
 	
 	%Main Success Scenario: A typical, unconditional happy path scenario of success.
 	\addscenario{Main Success Scenario:}{
-		\item User right clicks on the component
-		\item System shows context menu with options
-		\item User clicks on Duplicate
+		\item User clicks duplicate button
+		\item User click on component
 		\item Go to Use case 1
 		\item System sets the properties the same as original component
 	}

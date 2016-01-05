@@ -6,7 +6,7 @@
         <elementDefinition Id="2669392a-db36-4b68-a017-37aa2dc360ab" />
         <suppliersInternal>
           <interfaceRealization Id="de73a7eb-4149-448e-84c2-48cbaeb814a5">
-            <interfaceMoniker Id="6d636837-5687-4b77-9ae1-b4d365171f10" LastKnownName="IComponent" />
+            <interfaceMoniker Id="6d636837-5687-4b77-9ae1-b4d365171f10" LastKnownName="IComponentEntity" />
             <elementDefinition Id="cb389f8a-08c8-4467-a8a9-37991fa96956" />
           </interfaceRealization>
         </suppliersInternal>
@@ -113,20 +113,20 @@
           <property Id="321610f6-8ede-4e0e-8480-2b7aaa5b9cbf" name="X" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="2651c867-1b31-40d8-b9dc-7b769e0ae47f" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="213705f7-8033-4b58-a7d9-af3047c33e19" LastKnownName="Int" />
+              <referencedTypeMoniker Id="80452322-4f83-40ca-85c3-8dd9c6b65639" LastKnownName="Double" />
             </type_NamedElement>
           </property>
           <property Id="27bc980f-9478-48f7-b4ad-b5279d9cfd1d" name="Y" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="8ec8ac55-2097-4c96-af77-ce01ddf94c25" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="213705f7-8033-4b58-a7d9-af3047c33e19" LastKnownName="Int" />
+              <referencedTypeMoniker Id="5784760b-81e7-46e5-9e51-5ee43c811ad6" LastKnownName="Double" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <Interface Id="6d636837-5687-4b77-9ae1-b4d365171f10" name="IComponent" isAbstract="false" isLeaf="false">
+      <Interface Id="6d636837-5687-4b77-9ae1-b4d365171f10" name="IComponentEntity" isAbstract="false" isLeaf="false">
         <elementDefinition Id="1eded771-87e3-4e1d-97dc-2c4ee4cdb8c1" />
         <ownedAttributes>
           <property Id="d6bce6a7-2b10-495d-a8f3-069c441eb0ae" name="Position" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -143,7 +143,7 @@
         <elementDefinition Id="41f88aeb-10a2-49f2-bc61-52545eaca20b" />
         <suppliersInternal>
           <interfaceRealization Id="ca269661-4e0d-4bc2-a381-4176fdd82508">
-            <interfaceMoniker Id="6d636837-5687-4b77-9ae1-b4d365171f10" LastKnownName="IComponent" />
+            <interfaceMoniker Id="6d636837-5687-4b77-9ae1-b4d365171f10" LastKnownName="IComponentEntity" />
             <elementDefinition Id="7d6e50dc-0a96-4176-a034-10ce04908844" />
           </interfaceRealization>
         </suppliersInternal>
@@ -180,7 +180,7 @@
         <elementDefinition Id="e5feecfb-8cf9-430f-aede-f3e8ef64cb55" />
         <suppliersInternal>
           <interfaceRealization Id="fe18ccb7-8f8d-4a3f-a9c4-4afcd92da0ff">
-            <interfaceMoniker Id="6d636837-5687-4b77-9ae1-b4d365171f10" LastKnownName="IComponent" />
+            <interfaceMoniker Id="6d636837-5687-4b77-9ae1-b4d365171f10" LastKnownName="IComponentEntity" />
             <elementDefinition Id="acebbfd4-45cb-43bd-b644-6fdd896ffd40" />
           </interfaceRealization>
         </suppliersInternal>
@@ -205,7 +205,7 @@
         <elementDefinition Id="aff10cf2-5a7a-4492-9ab0-86d7522d0377" />
         <suppliersInternal>
           <interfaceRealization Id="f37a58f9-c4e1-45ee-bbbf-2cae7f595760">
-            <interfaceMoniker Id="6d636837-5687-4b77-9ae1-b4d365171f10" LastKnownName="IComponent" />
+            <interfaceMoniker Id="6d636837-5687-4b77-9ae1-b4d365171f10" LastKnownName="IComponentEntity" />
             <elementDefinition Id="22cec92d-41a6-4af0-9da7-d425b11240ed" />
           </interfaceRealization>
         </suppliersInternal>
@@ -247,7 +247,7 @@
         <elementDefinition Id="2425d559-80f9-4246-9ced-2d7160ccf160" />
         <targetEnds>
           <association Id="eeb427fd-8b39-42c5-9d00-039eca97a95b" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
-            <interfaceMoniker Id="6d636837-5687-4b77-9ae1-b4d365171f10" LastKnownName="IComponent" />
+            <interfaceMoniker Id="6d636837-5687-4b77-9ae1-b4d365171f10" LastKnownName="IComponentEntity" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="fd4b4493-cc18-4a13-b9b5-720ab7c3062e" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
@@ -309,7 +309,7 @@
           <property Id="6e9dffd7-aef6-4b4b-9b50-d30b1fbc3939" name="Components" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="948f2d10-9593-42b8-8161-1d75b948ce1e" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="eaa7b5e1-58f6-4147-be2c-3195be3af24d" LastKnownName="List&lt;IComponent&gt;" />
+              <referencedTypeMoniker Id="59742862-ca31-42e7-8fd9-4b72d5092489" LastKnownName="List&lt;IComponentEntity&gt;" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -331,8 +331,18 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="eaa7b5e1-58f6-4147-be2c-3195be3af24d" name="List&lt;IComponent&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;IComponent&gt;">
-        <elementDefinition Id="0c9fdf1e-d81f-4391-92cc-a508734b14ec" />
+      <referencedType Id="80452322-4f83-40ca-85c3-8dd9c6b65639" name="Double" isAbstract="false" isLeaf="false" cachedFullName="Double">
+        <elementDefinition Id="372329d5-24f7-473c-bf83-1ea00ef82ef7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="5784760b-81e7-46e5-9e51-5ee43c811ad6" name="Double" isAbstract="false" isLeaf="false" cachedFullName="Double">
+        <elementDefinition Id="372329d5-24f7-473c-bf83-1ea00ef82ef7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="59742862-ca31-42e7-8fd9-4b72d5092489" name="List&lt;IComponentEntity&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;IComponentEntity&gt;">
+        <elementDefinition Id="bf7ade6e-a2c3-4e3d-88f3-04ab11b4abce" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

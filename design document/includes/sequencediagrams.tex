@@ -6,7 +6,7 @@ The businness layer isn't supposed to know about the view. As seen in figure \re
 In figure \ref{fig:seqoverall} a sequence diagram is visible which goes through all the layers of the application. Very noticeable is that \emph{IFlowModel} and \emph{IDataAccesLayer} both have the \emph{OpenFile} operation. Usually the presentation layer isn't suppose to know about the data layer because the data access layer usually contains CRUD operations.
 
 \section{Presentation layer}
-The sequence diagram in figure \ref{fig:seqprespipe} only contains the MVC pattern since no \emph{ViewModel} is used. Many steps are required to get the selected component on the screen since the standard graphics are used.
+In figure \ref{fig:seqprespipe} many things are triggered by the user. Those are triggered by events from WPF when a component is selected. The flowModel contains an event which has to be triggered when the network has changed. That event is passed on to the \emph{IFlowCalculator} to be called when it is done.
 
 \begin{figure}[h!]
 	\centering
@@ -22,14 +22,9 @@ The sequence diagram in figure \ref{fig:seqprespipe} only contains the MVC patte
 	\label{fig:seqoverall}
 \end{figure}
 
-\begin{sidewaysfigure}[h!]
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{figures/PresentationCreateConnection1.pdf}
+	\includegraphics[width=\textwidth]{figures/PresentationCreateConnection.pdf}
 	\caption{Presentation create pipeline}
 	\label{fig:seqprespipe}
-\end{sidewaysfigure}
-
-\begin{sidewaysfigure}[h!]
-	\centering
-	\includegraphics[width=\textwidth]{figures/PresentationCreateConnection2.pdf}
-\end{sidewaysfigure}
+\end{figure}

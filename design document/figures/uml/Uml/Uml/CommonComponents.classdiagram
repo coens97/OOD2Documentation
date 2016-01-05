@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="5d08926d-5ba1-43f3-ad29-3d2f85948ff1" name="Common" linkedPackageId="62ddd59a-68bd-4c2d-8eee-6170eb51c259" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="5d08926d-5ba1-43f3-ad29-3d2f85948ff1" name="Common" linkedPackageId="62ddd59a-68bd-4c2d-8eee-6170eb51c259" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <ownedCommentsInternal>
     <comment Id="b883118f-e4fe-4dc5-be6e-4b0d2dd99c16">
       <elementDefinition Id="a1e2b9ad-48d1-475c-8b08-e3dac8af8933" />
@@ -102,13 +102,13 @@ FlowOutput size is 2</body>
           <property Id="4c23cda0-bb31-4cd1-9e3a-d553fae069d7" name="X" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="2651c867-1b31-40d8-b9dc-7b769e0ae47f" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="926116a8-d27b-4486-800a-b0b7b31956de" LastKnownName="Int" />
+              <referencedTypeMoniker Id="4607ce17-b626-4222-a46c-af44f24ad805" LastKnownName="Double" />
             </type_NamedElement>
           </property>
           <property Id="feb0511c-9f2b-458d-9022-1d03833eb04c" name="Y" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="8ec8ac55-2097-4c96-af77-ce01ddf94c25" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="663348ce-d384-4fd1-9436-7a62ca6430b7" LastKnownName="Int" />
+              <referencedTypeMoniker Id="4607ce17-b626-4222-a46c-af44f24ad805" LastKnownName="Double" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -372,16 +372,6 @@ FlowOutput size is 2</body>
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="926116a8-d27b-4486-800a-b0b7b31956de" name="Int" isAbstract="false" isLeaf="false" cachedFullName="Int">
-        <elementDefinition Id="b3e03460-bd28-4922-8842-901c0e6e8935" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="663348ce-d384-4fd1-9436-7a62ca6430b7" name="Int" isAbstract="false" isLeaf="false" cachedFullName="Int">
-        <elementDefinition Id="b3e03460-bd28-4922-8842-901c0e6e8935" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <referencedType Id="cd8d00be-b464-4cc6-ac46-f6557d11ea99" name="IFlowOutput" isAbstract="false" isLeaf="false" cachedFullName="Uml::IFlowOutput">
         <elementDefinition Id="05c25a56-95c5-40d5-91c8-5fee2ed290bd" />
       </referencedType>
@@ -389,6 +379,11 @@ FlowOutput size is 2</body>
     <packageHasNamedElement>
       <referencedType Id="72bd8811-a04d-4c70-8b89-8a5b92dad078" name="IFlowInput" isAbstract="false" isLeaf="false" cachedFullName="Uml::IFlowInput">
         <elementDefinition Id="01759d60-6085-40e2-9a90-36ab8963a767" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4607ce17-b626-4222-a46c-af44f24ad805" name="Double" isAbstract="false" isLeaf="false" cachedFullName="Double">
+        <elementDefinition Id="372329d5-24f7-473c-bf83-1ea00ef82ef7" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

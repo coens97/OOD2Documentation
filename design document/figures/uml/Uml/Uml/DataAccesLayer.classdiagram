@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="479a65f2-50fa-47da-b346-799b0f68b43e" name="DataAccesLayer" linkedPackageId="4446617e-1a75-4d64-b8de-ca85b24cb930" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="4c6aa513-925c-4a3e-bf94-adef6d19787a">
-      <profileInstance Id="527e9ec1-0c88-461e-87b4-3fc324df0516" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="e1733d9d-fef7-45d0-9c24-c76b1ed759bd">
-      <profileInstance Id="f86c3dcc-43f1-4b2e-99c1-0c228dc97f5a" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="479a65f2-50fa-47da-b346-799b0f68b43e" name="DataAccesLayer" linkedPackageId="4446617e-1a75-4d64-b8de-ca85b24cb930" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <Interface Id="0d9d4121-4849-4d6a-91d2-d92996897ebc" name="IDataAccesLayer" isAbstract="false" isLeaf="false">
@@ -101,8 +87,187 @@
         <elementDefinition Id="b4727c54-77da-4653-8936-b244fa35c901" />
       </referencedType>
     </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="006b0f66-2389-4e5b-8eca-5df37f2e1453" name="FlowFile" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="632fe60a-e45e-47fd-b0a1-f4383094c879" />
+        <targetEnds>
+          <association Id="25cab277-d147-4b1c-9e0b-cc88d8e2aafa" isDerived="false" sourceEndRoleName="FlowFile" targetEndRoleName="PipeFile" isLeaf="false" isAbstract="false">
+            <classMoniker Id="40dc1452-bee3-4ef1-b007-a5c43e03b0e3" LastKnownName="PipeFile" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="50f42d43-ea69-41ef-8e80-6fe6669b5c44" name="FlowFile" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f7ee720b-f86a-482f-b5b6-316f062df7a9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="410bbdbf-ecb8-4c0c-9ca2-b686d85d56c9" name="PipeFile" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <lowerValueInternal>
+                    <literalString Id="3f120cd9-d380-4211-9aef-03dd3cb01ce2" name="Lower" value="0">
+                      <elementDefinition Id="3d33de17-575f-4961-afaa-609a643ffc76" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="dd0038b7-1bd3-45b3-a803-05bd37f35bec" name="Upper" value="*">
+                      <elementDefinition Id="ce52ef87-08a6-446a-8aa3-02b0664980bf" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="b4f61a7a-43d2-48c7-b64a-490895d6fb8b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2800e281-dc07-46f3-812d-589c4e270455" />
+          </association>
+          <association Id="6239af14-ee33-4f9e-a54d-a96963dc21ff" isDerived="false" sourceEndRoleName="FlowFile" targetEndRoleName="ComponentFile&lt;T&gt;" isLeaf="false" isAbstract="false">
+            <classMoniker Id="da948ce8-da8c-48d3-a47c-3af4028d4c2f" LastKnownName="ComponentFile&lt;T&gt;" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2b4503f1-0a5b-4b1f-935f-1357d9d37d52" name="FlowFile" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7c1aaca2-fe81-4a73-87a5-4c47a159ef48" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="32fa8438-b4b3-4d90-8f8e-a13be1c7a3b3" name="ComponentFile&lt;T&gt;" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="a1eaecb4-9801-46c9-b89a-bf210cb120cd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="94601cae-4d3c-4647-9c00-ca6cf4713f36" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="f05e828d-0d96-438b-bb19-9036f9af6115" name="Mergers" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="093ff1c2-881b-4889-a34a-bb6a5d96568b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="4b3f35a0-ecf9-46ae-869d-e483de7f36e1" LastKnownName="ComponentFile&lt;MergerEntity&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="ef117089-e55e-4e69-8e53-6bd1845fb228" name="Pipes" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3f6bf17a-d594-422e-a1fe-2938902e69a2" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="c3985c29-ec4f-42dd-bc1c-ee20da969701" LastKnownName="PipeFile" />
+            </type_NamedElement>
+          </property>
+          <property Id="d56656fc-c9de-413c-b63a-c2c78b9c22dd" name="Pumps" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="28d4bb92-92d8-43d6-a1f2-4fbc4c4c8fa0" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="217a7501-714f-4e85-8d44-303b23d6f151" LastKnownName="ComponentFile&lt;PumpEntity&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="2f67b755-2cd4-42ab-8439-fdf044d58b04" name="Sinks" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9a3d3b1c-b88d-4807-ac54-d941e40041c5" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="3d807f55-6035-42eb-b22e-33fb60bf6051" LastKnownName="ComponentFile&lt;SinkEntity&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="9de4b5f6-f527-4596-9b4e-14f0a8ed8268" name="Splitters" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3ad35728-0fb8-466b-afcd-8a78cbcf7f6f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="6674ae0b-3016-4b74-a771-2e849bb2f105" LastKnownName="ComponentFile&lt;SplitterEntity&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="40dc1452-bee3-4ef1-b007-a5c43e03b0e3" name="PipeFile" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="03f38d36-3ad8-469e-8ff5-ab9ad7063d78" />
+        <ownedAttributesInternal>
+          <property Id="022ae800-5dab-4fba-8e23-e6af0c628de3" name="EndComponent" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7c9f6743-ccbf-4bc5-8e2c-3dab602267a9" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e0cde54a-f490-4347-9102-5d83f7a8ad0d" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+          <property Id="a1b01012-9807-4bee-94c6-8b9b1716a050" name="StartComponent" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="858e966a-985a-416e-91b1-02f44751369d" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e0cde54a-f490-4347-9102-5d83f7a8ad0d" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+          <property Id="21aec210-be51-4758-8673-ea79e80c50b4" name="Pipe" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8aba36fd-f6a2-48cb-a936-34deb7aa6de9" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="cf6a6659-8d80-46a3-b69d-7f2b4c8b7821" LastKnownName="PipeEntity" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="e0cde54a-f490-4347-9102-5d83f7a8ad0d" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="43eb3f01-2d1e-4675-a5aa-4657c8bf10b7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="cf6a6659-8d80-46a3-b69d-7f2b4c8b7821" name="PipeEntity" isAbstract="false" isLeaf="false" cachedFullName="Uml::PipeEntity">
+        <elementDefinition Id="0b0f0c90-7a29-4b53-b615-00b5aaa4526f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="da948ce8-da8c-48d3-a47c-3af4028d4c2f" name="ComponentFile&lt;T&gt;" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="33812877-ce86-436f-aaa1-d75eec0c0718" />
+        <ownedAttributesInternal>
+          <property Id="92efe16a-3054-4477-973a-3a15f1615cea" name="Component" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d506b75d-f127-4598-bf24-1d8601cac753" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="0935be87-7517-4d88-8d9d-18a5497e7339" LastKnownName="T" />
+            </type_NamedElement>
+          </property>
+          <property Id="56ddd2f5-5609-4b39-9a1f-ceb814cc01b1" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c47b1293-a4f9-45b7-90f5-4811e50f6194" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e0cde54a-f490-4347-9102-5d83f7a8ad0d" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="0935be87-7517-4d88-8d9d-18a5497e7339" name="T" isAbstract="false" isLeaf="false" cachedFullName="T">
+        <elementDefinition Id="56d998d7-87e1-41f7-aa35-6b58330a4a0e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4b3f35a0-ecf9-46ae-869d-e483de7f36e1" name="ComponentFile&lt;MergerEntity&gt;" isAbstract="false" isLeaf="false" cachedFullName="ComponentFile&lt;MergerEntity&gt;">
+        <elementDefinition Id="066bd724-1cd9-46a6-b80c-06bf74517f59" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c3985c29-ec4f-42dd-bc1c-ee20da969701" name="PipeFile" isAbstract="false" isLeaf="false" cachedFullName="Uml::PipeFile">
+        <elementDefinition Id="03f38d36-3ad8-469e-8ff5-ab9ad7063d78" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="217a7501-714f-4e85-8d44-303b23d6f151" name="ComponentFile&lt;PumpEntity&gt;" isAbstract="false" isLeaf="false" cachedFullName="ComponentFile&lt;PumpEntity&gt;">
+        <elementDefinition Id="a80369d8-25e1-4104-bad5-1816c5032903" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3d807f55-6035-42eb-b22e-33fb60bf6051" name="ComponentFile&lt;SinkEntity&gt;" isAbstract="false" isLeaf="false" cachedFullName="ComponentFile&lt;SinkEntity&gt;">
+        <elementDefinition Id="53cb1f25-72a6-4a7d-8175-2fccb0877ed9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6674ae0b-3016-4b74-a771-2e849bb2f105" name="ComponentFile&lt;SplitterEntity&gt;" isAbstract="false" isLeaf="false" cachedFullName="ComponentFile&lt;SplitterEntity&gt;">
+        <elementDefinition Id="6c363321-c7f7-465d-b280-3644eb3e2b96" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="4446617e-1a75-4d64-b8de-ca85b24cb930" name="Uml">
     <elementDefinition Id="6e07362e-7e1f-4cd5-bf4f-eb4177744791" />
+    <profileInstances>
+      <packageHasProfileInstances Id="4c6aa513-925c-4a3e-bf94-adef6d19787a">
+        <profileInstance Id="527e9ec1-0c88-461e-87b4-3fc324df0516" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="e1733d9d-fef7-45d0-9c24-c76b1ed759bd">
+        <profileInstance Id="f86c3dcc-43f1-4b2e-99c1-0c228dc97f5a" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>
